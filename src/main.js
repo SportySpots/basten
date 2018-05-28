@@ -3,6 +3,9 @@ import App from './app'
 import router from '@router'
 import store from '@state/store'
 import '@components/_globals'
+import BootstrapVue from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
 
 // Don't warn about using the dev version of Vue in development
 Vue.config.productionTip = process.env.NODE_ENV === 'production'

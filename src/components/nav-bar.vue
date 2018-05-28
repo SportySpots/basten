@@ -52,16 +52,4 @@ export default {
 
 <style lang="scss" module>
 @import '@design';
-
-.container {
-  padding: 0;
-  margin: 0 0 $size-grid-padding;
-  text-align: center;
-  list-style-type: none;
-
-  > li {
-    display: inline-block;
-    margin-right: $size-grid-padding;
-  }
-}
 </style>
