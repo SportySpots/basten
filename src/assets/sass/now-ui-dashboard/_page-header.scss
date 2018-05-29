@@ -1,0 +1,84 @@
+.page-header {
+  position: relative;
+  min-height: 100vh;
+  max-height: 999px;
+  padding: 0;
+  color: $white-color;
+
+  .page-header-image {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .content-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    max-width: 880px;
+    padding: 0 15px;
+    color: #fff;
+    text-align: center;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .container {
+    z-index: 1;
+    height: 100%;
+  }
+
+  .category,
+  .description {
+    color: $opacity-8;
+  }
+
+  &.page-header-small {
+    min-height: 60vh;
+    max-height: 440px;
+  }
+
+  &.page-header-mini {
+    min-height: 40vh;
+    max-height: 340px;
+  }
+
+  .title {
+    margin-bottom: 15px;
+  }
+  .title + h4 {
+    margin-top: 10px;
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+  }
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  &[filter-color='orange'] {
+    @include linear-gradient(rgba($black-color, 0.2), rgba(224, 23, 3, 0.6));
+  }
+}

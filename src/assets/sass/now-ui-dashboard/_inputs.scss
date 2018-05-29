@@ -1,0 +1,377 @@
+/* stylelint-disable */
+
+@include form-control-placeholder($medium-gray, 1);
+
+.form-control {
+  font-size: $font-size-small;
+  line-height: normal;
+  color: $black-color;
+  background-color: $transparent-bg;
+  border: 1px solid $light-gray;
+  border-radius: $btn-round-radius;
+
+  @include transition-input-focus-color();
+  @include box-shadow(none);
+
+  &:focus {
+    color: $black-color;
+    border: 1px solid $primary-color;
+    outline: 0 !important;
+
+    @include box-shadow(none);
+
+    + .input-group-addon,
+    ~ .input-group-addon {
+      background-color: $transparent-bg;
+      border: 1px solid $primary-color;
+      border-left: none;
+    }
+  }
+
+  .has-success &,
+  .has-error &,
+  .has-success &:focus,
+  .has-error &:focus {
+    @include box-shadow(none);
+  }
+
+  .has-danger &,
+  .has-success & {
+    &.form-control-success,
+    &.form-control-danger {
+      background-image: none;
+    }
+  }
+
+  + .form-control-feedback {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -7px;
+    font-size: $font-size-base;
+    vertical-align: middle;
+    border-radius: $border-radius-large;
+  }
+
+  .open & {
+    border-bottom-color: transparent;
+    border-radius: $border-radius-large $border-radius-large 0 0;
+  }
+
+  + .input-group-addon {
+    background-color: $white-bg;
+  }
+}
+
+.has-success .input-group-addon,
+.has-success .form-control {
+  border-color: $light-gray;
+}
+
+.has-success .form-control:focus,
+.has-success.input-group-focus .input-group-addon {
+  border-color: lighten($success-color, 5%);
+}
+
+.has-danger .form-control,
+.has-danger .input-group-addon,
+.has-danger.input-group-focus .input-group-addon {
+  color: $danger-color;
+  background-color: rgba(222, 222, 222, 0.1);
+  border-color: lighten($danger-color, 30%);
+
+  &:focus {
+    background-color: $white-color;
+  }
+}
+
+.has-success,
+.has-danger {
+  &.form-group .form-control,
+  &.form-group.no-border .form-control {
+    padding-right: $padding-input-horizontal + 21;
+  }
+  &::after {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    bottom: 10px;
+    display: inline-block;
+    font-family: 'Nucleo Outline';
+    font-size: 11px;
+    color: $success-color;
+    content: '\ea22';
+  }
+
+  &.form-control-lg {
+    &::after {
+      top: 24px;
+      font-size: 13px;
+    }
+  }
+
+  &.has-label {
+    &::after {
+      top: 35px;
+    }
+  }
+
+  .form-control + label,
+  &.form-check .form-check-label label,
+  &.form-check::after {
+    display: none !important;
+  }
+
+  &.form-check .form-check-label {
+    color: $success-color;
+  }
+}
+
+.has-danger {
+  &::after {
+    color: $danger-color;
+    content: '\ea53';
+  }
+
+  &.form-check .form-check-label {
+    color: $danger-color;
+  }
+}
+
+@include form-control-lg-padding(
+  $padding-large-vertical,
+  $padding-input-horizontal
+);
+@include input-base-padding($padding-input-vertical, $padding-input-horizontal);
+
+.form-group.no-border,
+.input-group.no-border {
+  .form-control,
+  .form-control + .input-group-addon {
+    background-color: $opacity-gray-3;
+    border: medium none;
+    &:focus,
+    &:active,
+    &:active {
+      background-color: $opacity-gray-5;
+      border: medium none;
+    }
+  }
+
+  .form-control {
+    &:focus {
+      + .input-group-addon {
+        background-color: $opacity-gray-5;
+      }
+    }
+  }
+
+  .input-group-addon {
+    background-color: $opacity-gray-3;
+    border: none;
+  }
+}
+
+.has-error {
+  .form-control-feedback,
+  .control-label {
+    color: $danger-color;
+  }
+}
+.has-success {
+  .form-control-feedback,
+  .control-label {
+    color: $success-color;
+  }
+}
+
+.input-group-addon {
+  padding: $padding-base-vertical - 1 0 $padding-base-vertical - 1
+    $padding-base-horizontal - 1;
+  color: $dark-background;
+  background-color: $white-bg;
+  border: 1px solid $light-gray;
+
+  &.input-group-append {
+    margin-left: 0;
+    border-radius: 0 $btn-round-radius $btn-round-radius 0;
+  }
+  &.input-group-prepend {
+    margin-right: 0;
+    border-radius: $btn-round-radius 0 0 $btn-round-radius;
+  }
+
+  @include transition-input-focus-color();
+
+  .has-danger.input-group-focus & {
+    background-color: $white-color;
+  }
+
+  .has-success & {
+    background-color: $white-color;
+  }
+  .has-danger .form-control:focus + & {
+    color: $danger-color;
+  }
+  .has-success .form-control:focus + & {
+    color: $success-color;
+  }
+
+  + .form-control,
+  ~ .form-control {
+    @include input-size($padding-base-vertical - 1, $padding-base-horizontal);
+
+    padding-left: 18px;
+  }
+
+  i {
+    width: 17px;
+  }
+}
+
+.input-group-focus {
+  .input-group-addon {
+    background-color: $white-bg;
+    border-color: $primary-color;
+  }
+
+  &.no-border {
+    .input-group-addon {
+      background-color: $opacity-gray-5;
+    }
+  }
+}
+
+.input-group,
+.form-group {
+  position: relative;
+  margin-bottom: 10px;
+
+  .form-control-static {
+    margin-top: 9px;
+  }
+}
+.input-group[disabled] {
+  .input-group-addon {
+    background-color: $light-gray;
+  }
+}
+
+.input-group .form-control:not(:first-child):not(:last-child),
+.input-group-addon:not(:first-child):not(:last-child),
+.input-group-btn:not(:first-child):not(:last-child) {
+  border-left: 0 none;
+  border-radius: $btn-round-radius;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group .form-control:first-child,
+.input-group-addon:first-child,
+.input-group-btn:first-child > .dropdown-toggle,
+.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+  border-right: 0 none;
+}
+.input-group .form-control:last-child,
+.input-group-addon:last-child,
+.input-group-btn:last-child > .dropdown-toggle,
+.input-group-btn:first-child > .btn:not(:first-child) {
+  border-left: 0 none;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  color: $default-color;
+  cursor: not-allowed;
+  background-color: $light-gray;
+}
+
+.input-group-btn .btn {
+  padding: $padding-btn-vertical $padding-base-horizontal;
+  border-width: $border-thin;
+}
+.input-group-btn .btn-default:not(.btn-fill) {
+  border-color: $medium-gray;
+}
+
+.input-group-btn:last-child > .btn {
+  margin-left: 0;
+}
+textarea.form-control {
+  max-width: 100%;
+  max-height: 80px;
+  padding: 10px 10px 0 0;
+  line-height: 2;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid $light-gray;
+  border-radius: 0;
+
+  &:focus,
+  &:active {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+  }
+}
+
+.form.form-newsletter .form-group {
+  float: left;
+  width: 78%;
+  margin-top: 9px;
+  margin-right: 2%;
+}
+
+.input-group .input-group-btn {
+  padding: 0 12px;
+}
+
+// Input files - hide actual input - requires specific markup in the sample.
+.form-group input[type='file'] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.form-text {
+  font-size: $font-size-small;
+}
+
+.form-control-lg {
+  padding: 0;
+  font-size: inherit;
+  line-height: 0;
+  border-radius: 0;
+}
+
+.form-horizontal {
+  .col-form-label,
+  .label-on-right {
+    max-width: 180px;
+    padding: 10px 5px 0 15px;
+    text-align: right;
+  }
+
+  .checkbox-radios {
+    margin-bottom: 15px;
+
+    .form-check:first-child {
+      margin-top: 8px;
+    }
+  }
+
+  .label-on-right {
+    padding: 10px 15px 0 5px;
+    text-align: left;
+  }
+
+  .form-check-inline {
+    margin-top: 6px;
+  }
+}

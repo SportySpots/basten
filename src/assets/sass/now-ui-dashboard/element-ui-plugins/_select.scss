@@ -1,0 +1,69 @@
+@import '../variables';
+
+$box-shadow-lg: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+.select-card-styles {
+  border: none;
+  border-radius: $border-radius-small !important;
+  box-shadow: $box-shadow-lg;
+}
+
+@mixin select($type) {
+  .select-#{$type} {
+    &.el-select .el-input {
+      .el-input__inner {
+        @extend .btn-#{$type};
+      }
+    }
+    &.el-select-dropdown__item.selected {
+      @extend .text-#{$type};
+    }
+  }
+}
+
+.el-select .el-select__tags {
+  left: 5px;
+}
+
+.el-select .el-tag {
+  padding: 0;
+  margin: 0;
+  margin-right: 3px;
+  font-weight: $font-weight-normal;
+  color: $white-color;
+  background-color: transparent !important;
+  .el-tag__close.el-icon-close {
+    left: 0;
+    background-color: transparent;
+    opacity: 1;
+
+    &:hover {
+      color: $white-color;
+      background-color: transparent;
+    }
+  }
+}
+
+.el-select .el-input {
+  .el-select__caret {
+    color: $white-color !important;
+  }
+
+  .el-input__inner {
+    @extend .btn-round, .btn-base;
+
+    color: $white-color;
+    &::placeholder {
+      color: $white-color;
+      opacity: 1; /* Firefox */
+    }
+  }
+}
+
+.el-select-dropdown.el-popper {
+  border-radius: 10px;
+
+  @extend .select-card-styles;
+}
+
+@include select('info') @include select('primary') @include select('success')
+  @include select('warning') @include select('danger');

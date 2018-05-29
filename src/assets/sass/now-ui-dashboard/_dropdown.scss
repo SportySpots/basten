@@ -1,0 +1,235 @@
+/* stylelint-disable scss/operator-no-unspaced, selector-max-type, no-descending-specificity  */
+
+.dropdown-menu {
+  font-size: $font-size-base;
+  border: 0;
+  border-radius: $border-radius-extra-small;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+
+  @include transition($fast-transition-time, $transition-linear);
+
+  &.dropdown-menu-right {
+    right: 0 !important;
+    left: auto !important;
+    &::before {
+      right: 10px;
+      left: auto;
+    }
+  }
+
+  i {
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+  }
+
+  .now-ui-icons {
+    position: relative;
+    top: 4px;
+    margin-top: -5px;
+    margin-right: 10px;
+    font-size: 18px;
+    opacity: 0.5;
+  }
+
+  .dropdown-item {
+    &.active,
+    &:active {
+      color: inherit;
+    }
+  }
+
+  .dropup & {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: -5px;
+      left: 10px;
+      display: inline-block;
+      width: 0;
+      height: 0;
+      color: $white-color;
+      vertical-align: middle;
+      content: '';
+      border-top: 0.4em solid;
+      border-right: 0.4em solid transparent;
+      border-left: 0.4em solid transparent;
+    }
+
+    &.dropdown-menu-right {
+      &::after {
+        right: 10px;
+        left: auto;
+      }
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: -5px;
+    right: auto;
+    left: 10px;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    color: $white-color;
+    vertical-align: middle;
+    content: '';
+    border-right: 0.4em solid transparent;
+    border-bottom: 0.4em solid;
+    border-left: 0.4em solid transparent;
+  }
+
+  .dropdown-item,
+  .bootstrap-select &.inner li a {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    margin-top: 5px;
+    font-size: $font-size-small;
+
+    @include transition($fast-transition-time, $transition-linear);
+
+    &:hover,
+    &:focus {
+      background-color: $opacity-gray-3;
+    }
+
+    &.disabled,
+    &:disabled {
+      color: $default-color-opacity;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .dropdown-divider {
+    background-color: $opacity-gray-5;
+  }
+
+  .dropdown-header:not([href]):not([tabindex]) {
+    font-size: $font-size-mini;
+    font-weight: $font-weight-bold;
+    color: $default-color-opacity;
+    text-transform: uppercase;
+  }
+
+  &.dropdown-primary {
+    @include dropdown-colors(
+      darken($primary-color, 3%),
+      $opacity-8,
+      $white-color,
+      $opacity-2
+    );
+  }
+
+  &.dropdown-info {
+    @include dropdown-colors(
+      darken($info-color, 3%),
+      $opacity-8,
+      $white-color,
+      $opacity-2
+    );
+  }
+
+  &.dropdown-danger {
+    @include dropdown-colors(
+      darken($danger-color, 3%),
+      $opacity-8,
+      $white-color,
+      $opacity-2
+    );
+  }
+
+  &.dropdown-success {
+    @include dropdown-colors(
+      darken($success-color, 3%),
+      $opacity-8,
+      $white-color,
+      $opacity-2
+    );
+  }
+
+  &.dropdown-warning {
+    @include dropdown-colors(
+      darken($warning-color, 3%),
+      $opacity-8,
+      $white-color,
+      $opacity-2
+    );
+  }
+
+  .dropdown &,
+  .dropup:not(.bootstrap-select) &,
+  .bootstrap-select &:not(.inner),
+  &.bootstrap-datetimepicker-widget.top,
+  &.bootstrap-datetimepicker-widget.bottom {
+    @include transform-translate-y-dropdown(-20px);
+
+    top: 100% !important;
+    display: block;
+    visibility: hidden;
+
+    @include opacity(0);
+  }
+
+  &.bootstrap-datetimepicker-widget.top,
+  &.bootstrap-datetimepicker-widget.bottom {
+    @include transform-translate-y-dropdown(-20px);
+  }
+
+  .bootstrap-select.dropup &:not(.inner) {
+    @include transform-translate-y-dropdown(25px);
+  }
+
+  .dropup:not(.bootstrap-select) & {
+    @include transform-translate-y-dropdown(20px);
+
+    top: auto !important;
+    bottom: 100%;
+  }
+
+  .dropdown.show &,
+  .bootstrap-select.show &:not(.inner),
+  &.bootstrap-datetimepicker-widget.top.open,
+  &.bootstrap-datetimepicker-widget.bottom.open,
+  .dropup.show:not(.bootstrap-select) &,
+  .navbar .dropdown.show & {
+    @include opacity(1);
+
+    visibility: visible;
+
+    @include transform-translate-y-dropdown(1px);
+  }
+
+  &.bootstrap-datetimepicker-widget.top.open,
+  &.bootstrap-datetimepicker-widget.bottom.open {
+    @include;
+  }
+
+  .dropup.show:not(.bootstrap-select) & {
+    @include transform-translate-y-dropdown(-2px);
+  }
+}
+
+.button-dropdown {
+  padding-right: $padding-base-horizontal;
+  cursor: pointer;
+
+  .dropdown-toggle {
+    display: block;
+    padding-top: $padding-base-vertical;
+    padding-bottom: $padding-base-vertical;
+
+    &::after {
+      display: none;
+    }
+  }
+}

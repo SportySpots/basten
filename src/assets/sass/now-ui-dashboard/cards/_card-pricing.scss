@@ -1,0 +1,107 @@
+.card-pricing {
+  text-align: center;
+
+  .card-category {
+    padding-top: 1.25em;
+  }
+
+  .card-title {
+    margin-top: 30px;
+  }
+
+  .card-icon {
+    padding: 10px 0 0;
+
+    i {
+      position: relative;
+      width: 80px;
+      max-width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      font-size: 30px;
+      line-height: 2.7;
+      color: $default-color;
+      background-color: $white-color;
+      border-radius: 50%;
+      box-shadow: 0 9px 35px -6px rgba(0, 0, 0, 0.3);
+    }
+
+    &.icon-primary i {
+      @include icon-color($primary-color);
+    }
+    &.icon-info i {
+      @include icon-color($info-color);
+    }
+    &.icon-success i {
+      color: $success-color;
+      box-shadow: 0 9px 30px -6px rgba(22, 199, 13, 0.85);
+    }
+    &.icon-warning i {
+      @include icon-color($warning-color);
+    }
+    &.icon-danger i {
+      @include icon-color($danger-color);
+    }
+  }
+  h1 {
+    small {
+      font-size: 18px;
+
+      &:first-child {
+        position: relative;
+        top: -17px;
+        font-size: 26px;
+      }
+    }
+  }
+
+  ul {
+    max-width: 240px;
+    padding: 0;
+    margin: 10px auto;
+    list-style: none;
+
+    li {
+      padding: 12px 0;
+      color: $default-color;
+      text-align: center;
+      border-bottom: 1px solid rgba($default-color, 0.3);
+
+      &:last-child {
+        border: 0;
+      }
+      b {
+        color: $black-color;
+      }
+      i {
+        position: relative;
+        top: 3px;
+        right: 3px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &.card-background {
+    ul {
+      li {
+        color: $white-color;
+        border-color: rgba($white-color, 0.3);
+
+        b {
+          color: $white-color;
+        }
+      }
+    }
+    [class*='text-'] {
+      color: $white-color !important;
+    }
+    .card-body {
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+  &.card-background::after {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}

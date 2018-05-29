@@ -1,0 +1,143 @@
+.login-page,
+.register-page,
+.pricing-page,
+.lock-page {
+  .card-login {
+    .logo-container {
+      width: 65px;
+      margin: 0 auto;
+      margin-bottom: 55px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.login-page {
+  .card-login {
+    padding-bottom: $padding-base-horizontal;
+    border-radius: $border-radius-large;
+
+    .btn-wd {
+      min-width: 180px;
+    }
+
+    .input-group:last-child {
+      margin-bottom: 40px;
+    }
+
+    &.card-plain {
+      @include input-coloured-bg(
+        $opacity-5,
+        $white-color,
+        $white-color,
+        $transparent-bg,
+        $opacity-1,
+        $opacity-2
+      );
+
+      .input-group-addon,
+      .form-group.no-border .input-group-addon,
+      .input-group.no-border .input-group-addon {
+        color: $opacity-8;
+      }
+    }
+  }
+
+  .link {
+    font-size: 10px;
+    color: $white-color;
+    text-decoration: none;
+  }
+}
+
+.full-page {
+  > .content,
+  > .footer {
+    position: relative;
+    z-index: 4;
+  }
+
+  &.section-image {
+    position: initial;
+  }
+
+  > .content {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    .container {
+      color: $white-color;
+    }
+  }
+
+  .full-page-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  &.pricing-page {
+    .description {
+      margin-bottom: 65px;
+    }
+  }
+
+  &.register-page {
+    .info-horizontal {
+      padding: 0 0 20px;
+      text-align: left !important;
+
+      .icon {
+        margin-top: 0;
+
+        > i {
+          font-size: 2em;
+        }
+
+        &.icon-circle {
+          width: 65px;
+          max-width: 65px;
+          height: 65px;
+          margin-top: 8px;
+
+          i {
+            display: table;
+            margin: 0 auto;
+            font-size: 1.9em;
+            line-height: 3.5;
+          }
+        }
+      }
+      .description {
+        overflow: hidden;
+      }
+    }
+  }
+}

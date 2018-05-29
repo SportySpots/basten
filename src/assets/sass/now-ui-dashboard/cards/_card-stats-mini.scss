@@ -1,0 +1,53 @@
+.card-stats-mini {
+  &.card-background::after {
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
+    opacity: 0.94;
+  }
+
+  .card-body {
+    &::after {
+      display: block;
+      clear: both;
+      content: '';
+    }
+  }
+
+  .card-footer {
+    margin: 0 15px;
+    border-top: 1px solid $opacity-2;
+  }
+
+  &.card-background {
+    .card-body {
+      min-height: auto;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+  }
+
+  .card-title {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .info-area {
+    float: left;
+    width: 40%;
+    padding: 15px 0;
+    text-align: left;
+
+    .icon > i {
+      font-size: 2em;
+    }
+  }
+
+  .chart-area {
+    float: left;
+    width: 60%;
+  }
+
+  .stats {
+    color: $white-color;
+    text-align: left;
+  }
+}

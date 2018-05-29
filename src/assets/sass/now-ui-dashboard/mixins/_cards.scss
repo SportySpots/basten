@@ -1,0 +1,4 @@
+@mixin icon-color($color) {
+  color: $color;
+  box-shadow: 0 9px 30px -6px $color;
+}

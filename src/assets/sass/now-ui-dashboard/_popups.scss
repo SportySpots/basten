@@ -1,0 +1,81 @@
+.popover {
+  max-width: 240px;
+  font-size: $font-size-base;
+  line-height: 1.7;
+  border: none;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.2);
+
+  &.bs-popover-top .arrow::before,
+  &.bs-popover-left .arrow::before,
+  &.bs-popover-right .arrow::before,
+  &.bs-popover-bottom .arrow::before {
+    border-color: transparent;
+  }
+
+  .popover-header {
+    margin: 0;
+    margin-top: 5px;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semi;
+    color: $default-color-opacity;
+    text-transform: capitalize;
+    background-color: transparent;
+    border: none;
+  }
+
+  &::before {
+    display: none;
+  }
+
+  &.bs-tether-element-attached-top::after {
+    top: -9px;
+    border-bottom-color: $white-color;
+  }
+
+  &.popover-primary {
+    @include popover-color($primary-color, $white-color);
+  }
+
+  &.popover-info {
+    @include popover-color($info-color, $white-color);
+  }
+
+  &.popover-warning {
+    @include popover-color($warning-color, $white-color);
+  }
+
+  &.popover-danger {
+    @include popover-color($danger-color, $white-color);
+  }
+
+  &.popover-success {
+    @include popover-color($success-color, $white-color);
+  }
+}
+
+.tooltip {
+  &.bs-tooltip-right .arrow::before {
+    border-right-color: $white-color;
+  }
+
+  &.bs-tooltip-top .arrow::before {
+    border-top-color: $white-color;
+  }
+
+  &.bs-tooltip-bottom .arrow::before {
+    border-bottom-color: $white-color;
+  }
+
+  &.bs-tooltip-left .arrow::before {
+    border-left-color: $white-color;
+  }
+}
+
+.tooltip-inner {
+  min-width: 130px;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  font-size: $font-size-base;
+  color: inherit;
+  background-color: $white-color;
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+}

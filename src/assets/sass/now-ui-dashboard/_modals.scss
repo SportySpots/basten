@@ -1,0 +1,182 @@
+//
+// Modals
+// Design element Dialogs
+// --------------------------------------------------
+.modal-content {
+  border: none;
+  border-radius: $border-radius-small;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.5);
+  // Modal header
+  // Top section of the modal w/ title and dismiss
+  .modal-header {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 0;
+    padding-left: 24px;
+    border-bottom: none;
+
+    button {
+      position: absolute;
+      top: 30px;
+      right: 27px;
+      outline: 0;
+    }
+    .title {
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+  // Modal body
+  // Where all modal content resides (sibling of .modal-header and .modal-footer)
+  .modal-body {
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    line-height: 1.9;
+  }
+  // Footer (for actions)
+  .modal-footer {
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    justify-content: space-between;
+    padding-right: 24px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    border-top: none;
+
+    button {
+      width: auto;
+      padding-right: 16px;
+      padding-left: 16px;
+      margin: 0;
+      &.pull-left {
+        position: relative;
+        left: -5px;
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+    }
+  }
+  .modal-body + .modal-footer {
+    padding-top: 0;
+  }
+}
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  .modal-login {
+    max-width: 320px;
+
+    .card-login {
+      .logo-container {
+        width: 65px;
+        margin-top: 27px;
+        margin-bottom: 38px;
+      }
+    }
+  }
+
+  &.modal-mini {
+    p {
+      text-align: center;
+    }
+
+    .modal-dialog {
+      max-width: 255px;
+      margin: 0 auto;
+    }
+
+    &.show .modal-dialog {
+      -webkit-transform: translate(0, 30%);
+      -o-transform: translate(0, 30%);
+      transform: translate(0, 30%);
+    }
+
+    .modal-profile {
+      width: 70px;
+      height: 70px;
+      line-height: 5.7;
+      text-align: center;
+      background-color: $white-color;
+      border-radius: 50%;
+      box-shadow: 0 5px 50px 0 rgba(0, 0, 0, 0.3);
+
+      i {
+        font-size: 21px;
+        color: $primary-color;
+      }
+
+      &[class*='modal-profile-'] {
+        i {
+          color: $white-color;
+        }
+      }
+
+      &.modal-profile-primary {
+        background-color: $primary-color;
+      }
+
+      &.modal-profile-danger {
+        background-color: $danger-color;
+      }
+
+      &.modal-profile-warning {
+        background-color: $warning-color;
+      }
+
+      &.modal-profile-success {
+        background-color: $success-color;
+      }
+
+      &.modal-profile-info {
+        background-color: $info-color;
+      }
+    }
+
+    .modal-footer {
+      button {
+        text-transform: uppercase;
+
+        &:first-child {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &.modal-default {
+    @include modal-colors($white-color, $black-color);
+  }
+
+  &.modal-primary {
+    @include modal-colors($primary-color, $white-color);
+  }
+
+  &.modal-danger {
+    @include modal-colors($danger-color, $white-color);
+  }
+
+  &.modal-warning {
+    @include modal-colors($warning-color, $white-color);
+  }
+
+  &.modal-success {
+    @include modal-colors($success-color, $white-color);
+  }
+
+  &.modal-info {
+    @include modal-colors($info-color, $white-color);
+  }
+
+  .modal-header .close {
+    color: $danger-color;
+    text-shadow: none;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}

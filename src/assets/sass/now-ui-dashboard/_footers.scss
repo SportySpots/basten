@@ -1,0 +1,48 @@
+/* stylelint-disable scss/operator-no-unspaced, selector-max-type, no-descending-specificity  */
+
+.footer {
+  padding: 24px 0;
+
+  &.footer-default {
+    background-color: #f2f2f2;
+  }
+
+  nav {
+    display: inline-block;
+    float: left;
+    padding-left: 7px;
+  }
+
+  ul {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    li {
+      display: inline-block;
+
+      a {
+        padding: $padding-base-vertical;
+        font-size: $font-size-small;
+        color: inherit;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: $font-size-small;
+    line-height: 1.8;
+  }
+
+  &::after {
+    display: table;
+    clear: both;
+    content: ' ';
+  }
+}

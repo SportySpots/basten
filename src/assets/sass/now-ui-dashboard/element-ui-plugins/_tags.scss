@@ -1,0 +1,35 @@
+@import '../variables';
+
+@mixin tag($type, $color) {
+  .el-tag,
+  .el-tag.el-tag--#{$type} {
+    @extend .badge, .badge-#{$type};
+
+    color: $white-color;
+    .el-tag__close {
+      color: $white-color;
+      opacity: 1;
+    }
+    .el-tag__close:hover {
+      font-size: $font-size-base;
+      color: $white-color;
+      background-color: transparent;
+      border-radius: 0;
+    }
+  }
+}
+.el-tag {
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+.input-new-tag {
+  display: inline;
+  width: 80px !important;
+  height: 24px;
+  margin-left: 10px;
+}
+
+@include tag('info', $info-color) @include tag('primary', $primary-color)
+  @include tag('success', $success-color) @include
+  tag('warning', $warning-color) @include tag('danger', $danger-color) @include
+  tag('default', $default-color);

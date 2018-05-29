@@ -19,6 +19,10 @@ module.exports = {
     'no-console': process.env.PRE_COMMIT
       ? ['error', { allow: ['warn', 'error'] }]
       : 'off',
+    // TODO: Disable temporarily.
+    'vue/require-default-prop': 'off',
+    'vue/require-prop-types': 'off',
+    'vue/this-in-template': 'off',
   },
   overrides: [
     {

@@ -1,0 +1,78 @@
+%card-stats {
+  hr {
+    margin: 5px 15px;
+  }
+}
+
+.card-stats {
+  @extend %card-stats;
+
+  .statistics {
+    position: relative;
+    padding: 15px 0;
+    text-align: center;
+
+    .title {
+      margin-bottom: 0;
+    }
+    .stats-title {
+      margin-bottom: 5px;
+      font-weight: $font-weight-normal;
+      color: $dark-gray;
+    }
+
+    &.statistics-horizontal,
+    &.statistics-horizontal .info-title {
+      padding: 0;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    margin: 0 15px;
+    vertical-align: top;
+  }
+
+  .stats-information {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    .stats-text {
+      font-size: 29px;
+    }
+
+    .stats-details {
+      display: block;
+      color: $default-color;
+    }
+  }
+
+  .dots {
+    text-align: right;
+
+    .dot {
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      background-color: $black-color;
+      border-radius: 50%;
+    }
+  }
+
+  [class*='col-'] {
+    .statistics::after {
+      position: absolute;
+      top: 20px;
+      right: 0;
+      width: 1px;
+      height: calc(100% - 40px);
+      content: '';
+      background: $medium-gray;
+    }
+  }
+  [class*='col-']:last-child {
+    .statistics::after {
+      display: none;
+    }
+  }
+}

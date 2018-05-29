@@ -1,25 +1,29 @@
 import Vue from 'vue'
-import App from './app'
-import router from '@router'
-import store from '@state/store'
-import '@components/_globals'
-import BootstrapVue from 'bootstrap-vue'
+import VueRouter from 'vue-router'
+import DashboardPlugin from './dashboard-plugin'
 
-Vue.use(BootstrapVue)
+// Plugins
+import App from './App.vue'
 
-// Don't warn about using the dev version of Vue in development
-Vue.config.productionTip = process.env.NODE_ENV === 'production'
+// router setup
+import routes from './routes/routes'
 
-const app = new Vue({
-  router,
-  store,
+/* We import element-ui variables at the end so they can override the default element-ui colors */
+import './assets/sass/element_variables.scss'
+
+// plugin setup
+Vue.use(VueRouter)
+Vue.use(DashboardPlugin)
+
+// configure router
+const router = new VueRouter({
+  routes, // short for routes: routes
+  linkActiveClass: 'active',
+})
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
   render: h => h(App),
-}).$mount('#app')
-
-// If running inside Cypress
-if (window.Cypress) {
-  // Attach the app to the window, which can be useful
-  // for manually setting state in Cypress commands
-  // such as `cy.logIn()`
-  window.__app__ = app
-}
+  router,
+})

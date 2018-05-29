@@ -1,0 +1,9 @@
+/* stylelint-disable scss/operator-no-unspaced, selector-max-type, no-descending-specificity  */
+
+img {
+  max-width: 100%;
+  border-radius: $border-radius-small;
+}
+.img-raised {
+  box-shadow: $box-shadow-raised;
+}

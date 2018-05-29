@@ -1,0 +1,249 @@
+.card-wizard {
+  min-height: 410px;
+  box-shadow: $box-shadow;
+  opacity: 0;
+
+  @include transition($general-transition-time, $transition-linear);
+
+  &.active {
+    opacity: 1;
+  }
+
+  .nav-pills .nav-item .nav-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .nav-pills .nav-item .nav-link,
+  .nav-pills .nav-item .nav-link.active,
+  .nav-pills .nav-item .nav-link:hover,
+  .nav-pills .nav-item .nav-link:focus,
+  .nav-pills .nav-item .nav-link.active:focus,
+  .nav-pills .nav-item .nav-link.active:hover {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .picture-container {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .wizard-navigation {
+    position: relative;
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+  }
+
+  .wizard-navigation .nav-link i,
+  .moving-tab i {
+    display: inline-block;
+    padding: 0;
+    margin-right: 6px;
+    font-size: 19px;
+    line-height: initial;
+    vertical-align: bottom;
+  }
+
+  .picture {
+    width: 106px;
+    height: 106px;
+    margin: 5px auto;
+    overflow: hidden;
+    color: #fff;
+    background-color: #999;
+    border: 1px solid $light-gray;
+    border-radius: 50%;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+
+    &:hover {
+      border-color: #2ca8ff;
+    }
+  }
+
+  .moving-tab {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: $primary-color;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: $white-color;
+    border-radius: 30px;
+    box-shadow: $box-shadow;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  &[data-color='primary'] {
+    @include set-wizard-color($brand-primary);
+  }
+  &[data-color='white'] {
+    @include set-wizard-color($white-color);
+  }
+
+  &[data-color='green'] {
+    @include set-wizard-color($brand-success);
+  }
+
+  &[data-color='blue'] {
+    @include set-wizard-color($brand-info);
+  }
+
+  &[data-color='orange'] {
+    @include set-wizard-color($brand-warning);
+  }
+
+  &[data-color='red'] {
+    @include set-wizard-color($brand-danger);
+  }
+
+  .picture-src {
+    width: 100%;
+  }
+
+  .tab-content {
+    min-height: 355px;
+    padding: 20px 0;
+  }
+
+  .wizard-footer {
+    padding: 0 15px;
+
+    .checkbox {
+      margin-top: 16px;
+    }
+  }
+
+  .disabled {
+    display: none;
+  }
+
+  .wizard-header {
+    padding: 25px 0 35px;
+    text-align: center;
+
+    h5 {
+      margin: 5px 0 0;
+    }
+  }
+
+  .nav-pills > li {
+    text-align: center;
+  }
+
+  .btn {
+    text-transform: uppercase;
+  }
+
+  .info-text {
+    margin: 10px 0 30px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .choice {
+    margin-top: 20px;
+    text-align: center;
+    cursor: pointer;
+
+    &[disabled] {
+      pointer-events: none;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .icon {
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 20px;
+      color: $default-color;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid $light-gray;
+      border-radius: 50%;
+      -webkit-transition: all 0.2s;
+      transition: all 0.2s;
+    }
+
+    i {
+      position: absolute;
+      right: 0;
+      left: 0;
+      font-size: 30px;
+      line-height: 116px;
+    }
+
+    &:hover,
+    &.active {
+      .icon {
+        border-color: #2ca8ff;
+      }
+    }
+
+    input[type='radio'],
+    input[type='checkbox'] {
+      position: absolute;
+      left: -10000px;
+      z-index: -1;
+    }
+  }
+
+  .btn-finish {
+    display: none;
+  }
+
+  .card-title + .description {
+    margin-bottom: 32px;
+    font-size: $font-size-base + 3;
+  }
+
+  .wizard-title {
+    margin: 0;
+  }
+
+  .nav-pills {
+    background-color: $orange-bg;
+
+    > li + li {
+      margin-left: 0;
+    }
+
+    > li > a {
+      min-width: 100px;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 18px;
+      color: #555;
+      text-align: center;
+      text-transform: uppercase;
+      border: 0 !important;
+      border-radius: 0;
+    }
+
+    > li.active > a,
+    > li.active > a:hover,
+    > li.active > a:focus,
+    > li > a:hover,
+    > li > a:focus {
+      background-color: inherit;
+      box-shadow: none;
+    }
+
+    > li i {
+      display: block;
+      padding: 15px 0;
+      font-size: 30px;
+    }
+  }
+}
