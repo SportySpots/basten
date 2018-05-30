@@ -595,11 +595,11 @@
     linear,
     left top,
     right top,
-    from(#0c2646),
-    color-stop(60%, #204065),
-    to(#2a5788)
+    from(#005537),
+    color-stop(60%, #52b152),
+    to(#005537)
   );
-  background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
+  background: linear-gradient(to right, #005537 0%, #52b152 60%, #005537 100%);
 
   .header {
     .title {

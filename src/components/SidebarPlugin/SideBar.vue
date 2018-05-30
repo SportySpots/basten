@@ -1,44 +1,44 @@
 <template>
-  <div 
+  <div
     :data-color="backgroundColor"
     class="sidebar">
 
     <div class="logo">
-      <a 
-        href="http://www.creative-tim.com" 
+      <a
+        href="https://sportyspots.com"
         class="simple-text logo-mini">
         <div class="logo-image">
           <img :src="logo">
         </div>
       </a>
 
-      <a 
-        href="http://www.creative-tim.com" 
+      <a
+        href="https://sportyspots.com"
         class="simple-text logo-normal">
         {{ title }}
       </a>
       <div class="navbar-minimize">
-        <button 
-          id="minimizeSidebar" 
-          class="btn btn-simple btn-icon btn-neutral btn-round" 
+        <button
+          id="minimizeSidebar"
+          class="btn btn-simple btn-icon btn-neutral btn-round"
           @click="minimizeSidebar">
           <i class="now-ui-icons text_align-center visible-on-sidebar-regular"/>
           <i class="now-ui-icons design_bullet-list-67 visible-on-sidebar-mini"/>
         </button>
       </div>
     </div>
-    <div 
-      ref="sidebarScrollArea" 
+    <div
+      ref="sidebarScrollArea"
       class="sidebar-wrapper">
       <slot/>
       <ul class="nav">
         <slot name="links">
-          <sidebar-item 
+          <sidebar-item
             v-for="(link, index) in sidebarLinks"
             :key="link.name + index"
             :link="link">
 
-            <sidebar-item 
+            <sidebar-item
               v-for="(subLink, index) in link.children"
               :key="subLink.name + index"
               :link="subLink"/>
@@ -55,7 +55,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: 'Vue NUD PRO',
+      default: 'SportySpots',
     },
     backgroundColor: {
       type: String,
@@ -76,7 +76,7 @@ export default {
     },
     logo: {
       type: String,
-      default: require('@/assets/img/icon-vue.png'),
+      default: require('@/assets/img/logo.png'),
     },
     sidebarLinks: {
       type: Array,

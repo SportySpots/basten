@@ -9,19 +9,10 @@
         </div>
         <a
           class="navbar-brand"
-          href="#pablo">Now UI Dashboard Pro</a>
+          href="#pablo">SportySpots</a>
       </div>
 
       <template slot="navbar-menu">
-        <router-link
-          class="nav-item"
-          tag="li"
-          to="/dashboard">
-          <a class="nav-link">
-            <i class="now-ui-icons design_app"/>
-            Dashboard
-          </a>
-        </router-link>
         <router-link
           class="nav-item"
           tag="li"
@@ -31,7 +22,6 @@
             Register
           </a>
         </router-link>
-
         <router-link
           class="nav-item"
           tag="li"
@@ -39,26 +29,6 @@
           <a class="nav-link">
             <i class="now-ui-icons users_circle-08"/>
             Login
-          </a>
-        </router-link>
-
-        <router-link
-          class="nav-item"
-          tag="li"
-          to="/pricing">
-          <a class="nav-link">
-            <i class="now-ui-icons business_money-coins"/>
-            Pricing
-          </a>
-        </router-link>
-
-        <router-link
-          class="nav-item"
-          tag="li"
-          to="/lock">
-          <a class="nav-link">
-            <i class="now-ui-icons ui-1_lock-circle-open"/>
-            Lock
           </a>
         </router-link>
       </template>
@@ -69,7 +39,7 @@
         :class="pageClass"
         class="full-page section-image"
         filter-color="black"
-        data-image="/img/bg13.jpg">
+        data-image="/img/unsplash-emile-victor-portenart-108608-unsplash.jpg">
         <div class="content">
           <div class="container">
             <zoom-center-transition
@@ -84,33 +54,24 @@
             <nav>
               <ul>
                 <li>
-                  <a href="https://www.creative-tim.com">
-                    Creative Tim
-                  </a>
-                </li>
-                <li>
-                  <a href="http://presentation.creative-tim.com">
+                  <a href="https://sportyspots.com/about-us">
                     About Us
                   </a>
                 </li>
                 <li>
-                  <a href="http://blog.creative-tim.com">
+                  <a href="https://sportyspots.com/privacy">
+                    Privacy
+                  </a>
+                </li>
+                <li>
+                  <a href="https://blog.sportyspots.com">
                     Blog
                   </a>
                 </li>
               </ul>
             </nav>
             <div class="copyright">
-              &copy; {{ year }}, Designed by
-              <a href="https://www.invisionapp.com/">Invision</a>.
-              Coded by
-              <a
-                href="https://github.com/cristijora"
-                target="_blank">Cristi Jora</a>
-              and <a
-                href="https://www.creative-tim.com/?ref=pdf-vuejs"
-                target="_blank"
-                rel="noopener">Creative Tim</a>.
+              &copy; {{ year }}, Designed and Crafted with love in Amsterdam.
             </div>
           </div>
         </footer>
@@ -149,7 +110,7 @@ export default {
   },
   computed: {
     imageStyles() {
-      let img = require('@/assets/img/bg13.jpg')
+      let img = require('@/assets/img/unsplash-emile-victor-portenart-108608-unsplash.jpg')
       return {
         backgroundImage: `url(${img})`,
       }

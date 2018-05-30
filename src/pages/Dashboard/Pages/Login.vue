@@ -5,35 +5,35 @@
 
         <div slot="header">
           <div class="logo-container">
-            <img 
-              src="@/assets/img/now-logo.png" 
+            <img
+              src="@/assets/img/sportyspots-logo@1x.png"
               alt="">
           </div>
         </div>
 
         <div>
-          <fg-input 
+          <fg-input
             class="no-border form-control-lg"
-            placeholder="First Name..."
-            addon-left-icon="now-ui-icons users_circle-08"/>
+            placeholder="Email..."
+            addon-left-icon="now-ui-icons ui-1_email-85"/>
 
-          <fg-input 
+          <fg-input
             class="no-border form-control-lg"
-            placeholder="Last Name..."
-            addon-left-icon="now-ui-icons text_caps-small"/>
+            placeholder="Password..."
+            addon-left-icon="now-ui-icons objects_key-25"/>
         </div>
 
         <div slot="footer">
-          <n-button 
-            type="primary" 
-            round 
+          <n-button
+            type="primary"
+            round
             block>
             Get Started
           </n-button>
           <div class="pull-left">
             <h6>
-              <router-link 
-                class="link footer-link" 
+              <router-link
+                class="link footer-link"
                 to="/register">
                 Create Account
               </router-link>
@@ -41,8 +41,8 @@
           </div>
 
           <div class="pull-right">
-            <h6><a 
-              href="#pablo" 
+            <h6><a
+              href="#pablo"
               class="link footer-link">Need Help?</a></h6>
           </div>
         </div>
