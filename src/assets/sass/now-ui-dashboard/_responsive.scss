@@ -115,7 +115,7 @@
     }
 
     .sidebar {
-      @include;
+      @include transform-translate-x(0);
     }
 
     body {
