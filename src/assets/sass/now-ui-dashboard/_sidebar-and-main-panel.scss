@@ -575,7 +575,7 @@
           > a
           .sidebar-normal,
         .user .info > a > span {
-          @include;
+          @include transform-translate-x(0);
 
           opacity: 1;
         }
