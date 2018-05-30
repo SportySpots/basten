@@ -289,7 +289,7 @@
       display: block;
       opacity: 1;
 
-      @include;
+      @include transform-translate-x(0);
     }
 
     &::after {
@@ -527,18 +527,6 @@
           @include transform-translate-x(-25px);
         }
       }
-
-      // .nav a i,
-      // .sidebar-wrapper > .nav [data-toggle="collapse"] ~ div > ul > li > a .sidebar-mini-icon,
-      // .sidebar-wrapper .user .info [data-toggle="collapse"] ~ div > ul > li > a .sidebar-mini-icon{
-      //   margin-left: 0;
-      //   width: 34px;
-      // }
-
-      // .user .photo{
-      //   margin-left: 23px;
-      // }
-
       .sidebar-wrapper {
         > .nav [data-toggle='collapse'] ~ div > ul > li > a .sidebar-normal,
         .user

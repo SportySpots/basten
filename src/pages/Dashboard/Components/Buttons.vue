@@ -599,7 +599,7 @@
   </div>
 </template>
 <script>
-import { Pagination } from 'src/components'
+import { Pagination } from '@components'
 
 export default {
   components: {

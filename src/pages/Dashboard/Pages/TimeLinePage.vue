@@ -93,7 +93,7 @@
 
 </template>
 <script>
-import { TimeLine, TimeLineItem } from 'src/components'
+import { TimeLine, TimeLineItem } from '@components'
 export default {
   components: {
     TimeLine,

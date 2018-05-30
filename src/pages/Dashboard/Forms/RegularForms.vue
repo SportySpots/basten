@@ -259,7 +259,7 @@
   </div>
 </template>
 <script>
-import { Checkbox, Radio } from 'src/components/index'
+import { Checkbox, Radio } from '@components/index'
 
 export default {
   components: {

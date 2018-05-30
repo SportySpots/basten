@@ -55,7 +55,7 @@
   </form>
 </template>
 <script>
-import { Checkbox } from 'src/components/index'
+import { Checkbox } from '@components/index'
 
 export default {
   components: {

@@ -118,7 +118,7 @@
 </template>
 <script>
 import { Table, TableColumn } from 'element-ui'
-import { Checkbox } from 'src/components'
+import { Checkbox } from '@components'
 import ShoppingTable from './ExtendedTables/ShoppingTable'
 
 export default {

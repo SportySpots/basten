@@ -297,7 +297,7 @@
   </div>
 </template>
 <script>
-import { Modal } from 'src/components'
+import { Modal } from '@components'
 
 export default {
   components: {

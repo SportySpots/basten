@@ -1,5 +1,5 @@
 <template>
-  <component 
+  <component
     v-click-outside="closeDropDown"
     :is="tag"
     :class="[
@@ -13,7 +13,7 @@
     @click="toggleDropDown">
 
     <slot name="title">
-      <a 
+      <a
         :class="{'no-caret': hideArrow}"
         class="dropdown-toggle nav-link"
         data-toggle="dropdown">
@@ -21,13 +21,14 @@
         <span class="no-icon">{{ title }}</span>
       </a>
     </slot>
-    <ul 
+    <ul
       :class="[{'dropdown-menu-right': position === 'right'}, {show: isOpen}]"
       class="dropdown-menu">
       <slot/>
     </ul>
   </component>
 </template>
+
 <script>
 export default {
   name: 'DropDown',
@@ -62,6 +63,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .dropdown {
   list-style-type: none;

@@ -251,7 +251,7 @@ import {
   Switch,
   FormGroupInput as FgInput,
   Slider,
-} from 'src/components/index'
+} from '@components/index'
 
 export default {
   components: {

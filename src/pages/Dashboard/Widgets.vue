@@ -288,6 +288,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import {
   StatsCard,
@@ -296,7 +297,7 @@ import {
   TimeLineItem,
   Table as NTable,
   Checkbox,
-} from 'src/components'
+} from '@components'
 
 export default {
   components: {

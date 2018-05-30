@@ -321,7 +321,7 @@ import {
   Progress as NProgress,
   LineChart,
   AsyncWorldMap,
-} from 'src/components'
+} from '@components'
 
 export default {
   components: {

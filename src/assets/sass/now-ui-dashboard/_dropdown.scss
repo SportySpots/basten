@@ -1,4 +1,4 @@
-/* stylelint-disable scss/operator-no-unspaced, selector-max-type, no-descending-specificity  */
+/* stylelint-disable scss/operator-no-unspaced, length-zero-no-unit, selector-max-type, no-descending-specificity  */
 
 .dropdown-menu {
   font-size: $font-size-base;
@@ -211,7 +211,7 @@
 
   &.bootstrap-datetimepicker-widget.top.open,
   &.bootstrap-datetimepicker-widget.bottom.open {
-    @include;
+    @include transform-translate-y-dropdown(0);
   }
 
   .dropup.show:not(.bootstrap-select) & {

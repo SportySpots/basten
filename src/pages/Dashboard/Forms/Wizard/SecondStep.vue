@@ -28,7 +28,7 @@
   </div>
 </template>
 <script>
-import { IconCheckbox } from 'src/components'
+import { IconCheckbox } from '@components'
 
 export default {
   components: {

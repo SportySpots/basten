@@ -100,7 +100,7 @@
 </template>
 <script>
 import { Table, TableColumn, Select, Option } from 'element-ui'
-import { Pagination as NPagination } from 'src/components'
+import { Pagination as NPagination } from '@components'
 import users from './users'
 import Fuse from 'fuse.js'
 import swal from 'sweetalert2'

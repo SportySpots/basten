@@ -1,9 +1,10 @@
 <template>
-  <div 
-    v-loading="true" 
-    id="loading" 
+  <div
+    v-loading="true"
+    id="loading"
     class="row"/>
 </template>
+
 <script>
 import Vue from 'vue'
 import { Loading } from 'element-ui'
@@ -11,6 +12,7 @@ import { Loading } from 'element-ui'
 Vue.use(Loading.directive)
 export default {}
 </script>
+
 <style>
 #loading {
   display: flex;

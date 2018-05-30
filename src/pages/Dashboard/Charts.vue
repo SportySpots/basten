@@ -144,7 +144,7 @@
   </div>
 </template>
 <script>
-import { LineChart, BarChart } from 'src/components'
+import { LineChart, BarChart } from '@components'
 
 export default {
   components: {

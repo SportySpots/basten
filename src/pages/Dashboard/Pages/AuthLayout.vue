@@ -123,7 +123,7 @@
   </div>
 </template>
 <script>
-import { Navbar, NavbarToggleButton } from 'src/components'
+import { Navbar, NavbarToggleButton } from '@components'
 import { ZoomCenterTransition } from 'vue2-transitions'
 
 export default {

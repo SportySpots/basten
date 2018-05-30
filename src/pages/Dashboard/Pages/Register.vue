@@ -86,7 +86,7 @@
   </div>
 </template>
 <script>
-import { Checkbox } from 'src/components'
+import { Checkbox } from '@components'
 export default {
   components: {
     Checkbox,

@@ -80,7 +80,7 @@
   </navbar>
 </template>
 <script>
-import { RouteBreadCrumb, Navbar, NavbarToggleButton } from 'src/components'
+import { RouteBreadCrumb, Navbar, NavbarToggleButton } from '@components'
 import { CollapseTransition } from 'vue2-transitions'
 
 export default {

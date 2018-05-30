@@ -87,8 +87,9 @@
     </drop-down>
   </ul>
 </template>
+
 <script>
-import DropDown from 'src/components/Dropdown.vue'
+import DropDown from '@components/Dropdown.vue'
 
 export default {
   components: {

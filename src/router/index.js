@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // https://github.com/declandewet/vue-meta
 import VueMeta from 'vue-meta'
-// Adds a loading bar at the top during page loads.
-import NProgress from 'nprogress/nprogress'
 import store from '@state/store'
 import routes from './routes'
 
@@ -29,6 +27,7 @@ const router = new VueRouter({
       return { x: 0, y: 0 }
     }
   },
+  linkActiveClass: 'active',
 })
 
 // Before each route evaluates...
@@ -64,16 +63,11 @@ router.beforeEach((routeTo, routeFrom, next) => {
 router.beforeResolve((routeTo, routeFrom, next) => {
   // If this isn't an initial page load...
   if (routeFrom.name) {
-    // Start the route progress bar.
-    NProgress.start()
   }
   next()
 })
 
 // When each route is finished evaluating...
-router.afterEach((routeTo, routeFrom) => {
-  // Complete the animation of the route progress bar.
-  NProgress.done()
-})
+router.afterEach((routeTo, routeFrom) => {})
 
 export default router

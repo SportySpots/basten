@@ -8,7 +8,7 @@
   </div>
 </template>
 <script>
-import AsyncWorldMap from 'src/components/WorldMap/AsyncWorldMap.vue'
+import AsyncWorldMap from '@components/WorldMap/AsyncWorldMap.vue'
 
 export default {
   components: {

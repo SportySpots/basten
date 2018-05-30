@@ -1,65 +1,63 @@
 // import store from '@state/store';
-import DashboardLayout from 'src/pages/Dashboard/Layout/DashboardLayout.vue'
-import AuthLayout from 'src/pages/Dashboard/Pages/AuthLayout.vue'
-import Widgets from 'src/pages/Dashboard/Widgets.vue'
+import DashboardLayout from '@pages/Dashboard/Layout/DashboardLayout.vue'
+import AuthLayout from '@pages/Dashboard/Pages/AuthLayout.vue'
+import Widgets from '@pages/Dashboard/Widgets.vue'
 
 // GeneralViews
-import NotFound from 'src/pages/GeneralViews/NotFoundPage.vue'
+import NotFound from '@pages/GeneralViews/NotFoundPage.vue'
 
 // Page Headers
-import DefaultHeader from 'src/pages/Dashboard/DefaultHeader'
-import DashboardHeader from 'src/pages/Dashboard/Dashboard/DashboardHeader.vue'
-import SweetAlertHeader from 'src/pages/Dashboard/Components/Headers/SweetAlertHeader'
-import CalendarHeader from 'src/pages/Dashboard/Calendar/CalendarHeader'
-import VectorMapsHeader from 'src/pages/Dashboard/Maps/VectorMapsHeader'
+import DefaultHeader from '@pages/Dashboard/DefaultHeader'
+import DashboardHeader from '@pages/Dashboard/Dashboard/DashboardHeader.vue'
+import SweetAlertHeader from '@pages/Dashboard/Components/Headers/SweetAlertHeader'
+import CalendarHeader from '@pages/Dashboard/Calendar/CalendarHeader'
+import VectorMapsHeader from '@pages/Dashboard/Maps/VectorMapsHeader'
 
 // Dashboard pages
-import Dashboard from 'src/pages/Dashboard/Dashboard/Dashboard.vue'
+import Dashboard from '@pages/Dashboard/Dashboard/Dashboard.vue'
 
 // Pages
-const User = () => import('src/pages/Dashboard/Pages/UserProfile.vue')
-const Pricing = () => import('src/pages/Dashboard/Pages/Pricing.vue')
-const TimeLine = () => import('src/pages/Dashboard/Pages/TimeLinePage.vue')
-const Login = () => import('src/pages/Dashboard/Pages/Login.vue')
-const Register = () => import('src/pages/Dashboard/Pages/Register.vue')
-const Lock = () => import('src/pages/Dashboard/Pages/Lock.vue')
+const User = () => import('@pages/Dashboard/Pages/UserProfile.vue')
+const Pricing = () => import('@pages/Dashboard/Pages/Pricing.vue')
+const TimeLine = () => import('@pages/Dashboard/Pages/TimeLinePage.vue')
+const Login = () => import('@pages/Dashboard/Pages/Login.vue')
+const Register = () => import('@pages/Dashboard/Pages/Register.vue')
+const Lock = () => import('@pages/Dashboard/Pages/Lock.vue')
 
 // Components pages
-const Buttons = () => import('src/pages/Dashboard/Components/Buttons.vue')
-const GridSystem = () => import('src/pages/Dashboard/Components/GridSystem.vue')
-const Panels = () => import('src/pages/Dashboard/Components/Panels.vue')
-const SweetAlert = () => import('src/pages/Dashboard/Components/SweetAlert.vue')
+const Buttons = () => import('@pages/Dashboard/Components/Buttons.vue')
+const GridSystem = () => import('@pages/Dashboard/Components/GridSystem.vue')
+const Panels = () => import('@pages/Dashboard/Components/Panels.vue')
+const SweetAlert = () => import('@pages/Dashboard/Components/SweetAlert.vue')
 const Notifications = () =>
-  import('src/pages/Dashboard/Components/Notifications.vue')
-const Icons = () => import('src/pages/Dashboard/Components/Icons.vue')
-const Typography = () => import('src/pages/Dashboard/Components/Typography.vue')
+  import('@pages/Dashboard/Components/Notifications.vue')
+const Icons = () => import('@pages/Dashboard/Components/Icons.vue')
+const Typography = () => import('@pages/Dashboard/Components/Typography.vue')
 
 // Forms pages
-const RegularForms = () => import('src/pages/Dashboard/Forms/RegularForms.vue')
-const ExtendedForms = () =>
-  import('src/pages/Dashboard/Forms/ExtendedForms.vue')
+const RegularForms = () => import('@pages/Dashboard/Forms/RegularForms.vue')
+const ExtendedForms = () => import('@pages/Dashboard/Forms/ExtendedForms.vue')
 const ValidationForms = () =>
-  import('src/pages/Dashboard/Forms/ValidationForms.vue')
-const Wizard = () => import('src/pages/Dashboard/Forms/Wizard.vue')
+  import('@pages/Dashboard/Forms/ValidationForms.vue')
+const Wizard = () => import('@pages/Dashboard/Forms/Wizard.vue')
 
 // TableList pages
-const RegularTables = () =>
-  import('src/pages/Dashboard/Tables/RegularTables.vue')
+const RegularTables = () => import('@pages/Dashboard/Tables/RegularTables.vue')
 const ExtendedTables = () =>
-  import('src/pages/Dashboard/Tables/ExtendedTables.vue')
+  import('@pages/Dashboard/Tables/ExtendedTables.vue')
 const PaginatedTables = () =>
-  import('src/pages/Dashboard/Tables/PaginatedTables.vue')
+  import('@pages/Dashboard/Tables/PaginatedTables.vue')
 
 // Maps pages
-const GoogleMaps = () => import('src/pages/Dashboard/Maps/GoogleMaps.vue')
-const FullScreenMap = () => import('src/pages/Dashboard/Maps/FullScreenMap.vue')
-const VectorMaps = () => import('src/pages/Dashboard/Maps/VectorMaps.vue')
+const GoogleMaps = () => import('@pages/Dashboard/Maps/GoogleMaps.vue')
+const FullScreenMap = () => import('@pages/Dashboard/Maps/FullScreenMap.vue')
+const VectorMaps = () => import('@pages/Dashboard/Maps/VectorMaps.vue')
 
 // Calendar
-const Calendar = () => import('src/pages/Dashboard/Calendar/CalendarRoute.vue')
+const Calendar = () => import('@pages/Dashboard/Calendar/CalendarRoute.vue')
 
 // Charts
-const Charts = () => import('src/pages/Dashboard/Charts.vue')
+const Charts = () => import('@pages/Dashboard/Charts.vue')
 
 let componentsMenu = {
   path: '/components',
@@ -104,6 +102,7 @@ let componentsMenu = {
     },
   ],
 }
+
 let formsMenu = {
   path: '/forms',
   component: DashboardLayout,

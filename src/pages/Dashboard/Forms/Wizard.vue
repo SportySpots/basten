@@ -45,7 +45,7 @@ import FirstStep from './Wizard/FirstStep.vue'
 import SecondStep from './Wizard/SecondStep.vue'
 import ThirdStep from './Wizard/ThirdStep.vue'
 import swal from 'sweetalert2'
-import { SimpleWizard, WizardTab } from 'src/components'
+import { SimpleWizard, WizardTab } from '@components'
 
 export default {
   components: {
