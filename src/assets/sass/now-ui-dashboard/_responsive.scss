@@ -130,7 +130,7 @@
 
       .navbar-collapse,
       .sidebar {
-        @include;
+        @include transform-translate-x(0);
       }
 
       .navbar-translate {
