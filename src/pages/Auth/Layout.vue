@@ -83,6 +83,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Navbar, NavbarToggleButton } from '@components'
 import { ZoomCenterTransition } from 'vue2-transitions'
@@ -150,6 +151,7 @@ export default {
   },
 }
 </script>
+
 <style lang="scss">
 // stylelint-disable scss/dollar-variable-pattern
 $scaleSize: 0.8;

@@ -1,15 +1,15 @@
 <template>
   <div class="user">
     <div class="photo">
-      <img 
-        src="@/assets/img/james.jpg" 
+      <img
+        src="@/assets/img/james.jpg"
         alt="avatar">
     </div>
     <div class="info">
-      <a 
-        :aria-expanded="!isClosed" 
-        data-toggle="collapse" 
-        href="#" 
+      <a
+        :aria-expanded="!isClosed"
+        data-toggle="collapse"
+        href="#"
         @click.stop="toggleMenu">
         <span>
           {{ title }}
@@ -19,8 +19,8 @@
       <div class="clearfix"/>
       <div>
         <collapse-transition>
-          <ul 
-            v-show="!isClosed" 
+          <ul
+            v-show="!isClosed"
             class="nav">
             <slot>
               <li>
@@ -31,14 +31,14 @@
               </li>
               <li>
                 <a href="#vue">
-                  <span class="sidebar-mini-icon">EP</span>
-                  <span class="sidebar-normal">Edit Profile</span>
+                  <span class="sidebar-mini-icon">S</span>
+                  <span class="sidebar-normal">Settings</span>
                 </a>
               </li>
               <li>
                 <a href="#vue">
-                  <span class="sidebar-mini-icon">S</span>
-                  <span class="sidebar-normal">Settings</span>
+                  <span class="sidebar-mini-icon">L</span>
+                  <span class="sidebar-normal">Logout</span>
                 </a>
               </li>
             </slot>
@@ -48,6 +48,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { CollapseTransition } from 'vue2-transitions'
 
@@ -73,6 +74,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .collapsed {
   transition: opacity 1s;

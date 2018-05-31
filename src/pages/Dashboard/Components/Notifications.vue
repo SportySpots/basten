@@ -10,39 +10,39 @@
             <span>This is a plain notification</span>
           </div>
           <div class="alert alert-info">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
             <span>This is a notification with close button.</span>
           </div>
-          <div 
-            class="alert alert-info alert-with-icon" 
+          <div
+            class="alert alert-info alert-with-icon"
             data-notify="container">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
-            <span 
-              data-notify="icon" 
+            <span
+              data-notify="icon"
               class="now-ui-icons ui-1_bell-53"/>
             <span data-notify="message">This is a notification with close button and icon.</span>
           </div>
-          <div 
-            class="alert alert-info alert-with-icon" 
+          <div
+            class="alert alert-info alert-with-icon"
             data-notify="container">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
-            <span 
-              data-notify="icon" 
+            <span
+              data-notify="icon"
               class="now-ui-icons ui-1_bell-53"/>
             <span data-notify="message">This is a notification with close button and icon and have many lines. You can see that the icon and the close button are always vertically aligned. This is a beautiful notification. So you don't have to worry about the style.</span>
           </div>
@@ -57,9 +57,9 @@
         </div>
         <div class="card-body">
           <div class="alert alert-primary">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
@@ -67,36 +67,36 @@
           </div>
 
           <div class="alert alert-info">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
             <span><b> Info - </b> This is a regular notification made with ".alert-info"</span>
           </div>
           <div class="alert alert-success">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
             <span><b> Success - </b> This is a regular notification made with ".alert-success"</span>
           </div>
           <div class="alert alert-warning">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
             <span><b> Warning - </b> This is a regular notification made with ".alert-warning"</span>
           </div>
           <div class="alert alert-danger">
-            <button 
-              type="button" 
-              aria-hidden="true" 
+            <button
+              type="button"
+              aria-hidden="true"
               class="close">
               <i class="now-ui-icons ui-1_simple-remove"/>
             </button>
@@ -121,21 +121,21 @@
               <div class="col-lg-8 ml-auto mr-auto">
                 <div class="row">
                   <div class="col-md-4">
-                    <n-button 
-                      type="primary" 
-                      block 
+                    <n-button
+                      type="primary"
+                      block
                       @click.native="notifyVue('top','left')">Top Left</n-button>
                   </div>
                   <div class="col-md-4">
-                    <n-button 
-                      type="primary" 
-                      block 
+                    <n-button
+                      type="primary"
+                      block
                       @click.native="notifyVue('top','center')">Top Center</n-button>
                   </div>
                   <div class="col-md-4">
-                    <n-button 
-                      type="primary" 
-                      block 
+                    <n-button
+                      type="primary"
+                      block
                       @click.native="notifyVue('top','right')">Top Right</n-button>
                   </div>
                 </div>
@@ -145,21 +145,21 @@
               <div class="col-lg-8 ml-auto mr-auto">
                 <div class="row">
                   <div class="col-md-4">
-                    <n-button 
-                      type="primary" 
-                      block 
+                    <n-button
+                      type="primary"
+                      block
                       @click.native="notifyVue('bottom','left')">Bottom Left</n-button>
                   </div>
                   <div class="col-md-4">
-                    <n-button 
-                      type="primary" 
-                      block 
+                    <n-button
+                      type="primary"
+                      block
                       @click.native="notifyVue('bottom','center')">Bottom Center</n-button>
                   </div>
                   <div class="col-md-4">
-                    <n-button 
-                      type="primary" 
-                      block 
+                    <n-button
+                      type="primary"
+                      block
                       @click.native="notifyVue('bottom','right')">Bottom Right</n-button>
                   </div>
                 </div>
@@ -173,13 +173,13 @@
                 <h4 class="card-title">Modal</h4>
               </div>
 
-              <n-button 
-                type="primary" 
+              <n-button
+                type="primary"
                 @click.native="modals.classic = true">
                 Classic modal
               </n-button>
-              <n-button 
-                type="info" 
+              <n-button
+                type="info"
                 @click.native="modals.notice = true">
                 Notice modal
               </n-button>
@@ -188,11 +188,11 @@
               </n-button>
 
               <!-- Classic Modal -->
-              <modal 
-                :show.sync="modals.classic" 
+              <modal
+                :show.sync="modals.classic"
                 header-classes="justify-content-center">
-                <h4 
-                  slot="header" 
+                <h4
+                  slot="header"
                   class="title title-up">Modal title</h4>
                 <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live
                 the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large
@@ -201,19 +201,19 @@
                 mouth.</p>
                 <template slot="footer">
                   <n-button>Nice Button</n-button>
-                  <n-button 
-                    type="danger" 
+                  <n-button
+                    type="danger"
                     @click.native="modals.classic = false">Close</n-button>
                 </template>
               </modal>
 
               <!-- notice modal -->
-              <modal 
+              <modal
                 :show.sync="modals.notice"
                 footer-classes="justify-content-center"
                 type="notice">
-                <h5 
-                  slot="header" 
+                <h5
+                  slot="header"
                   class="modal-title">How Do You Become an Affiliate?</h5>
                 <template>
                   <div class="instruction">
@@ -226,9 +226,9 @@
                       </div>
                       <div class="col-md-4">
                         <div class="picture">
-                          <img 
-                            src="@/assets/img/bg1.jpg" 
-                            alt="Thumbnail Image" 
+                          <img
+                            src="@/assets/img/bg1.jpg"
+                            alt="Thumbnail Image"
                             class="rounded img-raised">
                         </div>
                       </div>
@@ -244,9 +244,9 @@
                       </div>
                       <div class="col-md-4">
                         <div class="picture">
-                          <img 
-                            src="@/assets/img/bg3.jpg" 
-                            alt="Thumbnail Image" 
+                          <img
+                            src="@/assets/img/bg3.jpg"
+                            alt="Thumbnail Image"
                             class="rounded img-raised">
                         </div>
                       </div>
@@ -255,36 +255,36 @@
                   <p>If you have more questions, don't hesitate to contact us or send us a tweet @creativetim. We're
                   here to help!</p>
                 </template>
-                <div 
-                  slot="footer" 
+                <div
+                  slot="footer"
                   class="justify-content-center">
-                  <n-button 
-                    type="info" 
-                    round 
+                  <n-button
+                    type="info"
+                    round
                     @click.native="modals.notice = false">Sounds good!</n-button>
                 </div>
               </modal>
 
               <!-- small modal -->
-              <modal 
+              <modal
                 :show.sync="modals.mini"
                 :show-close="false"
                 class="modal-primary"
                 header-classes="justify-content-center"
                 type="mini">
-                <div 
-                  slot="header" 
+                <div
+                  slot="header"
                   class="modal-profile">
                   <i class="now-ui-icons users_circle-08"/>
                 </div>
                 <p>Always have an access to your profile</p>
                 <template slot="footer">
-                  <n-button 
-                    type="neutral" 
+                  <n-button
+                    type="neutral"
                     link>Back</n-button>
-                  <n-button 
-                    type="neutral" 
-                    link 
+                  <n-button
+                    type="neutral"
+                    link
                     @click.native="modals.mini = false">Close</n-button>
                 </template>
               </modal>
@@ -296,6 +296,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Modal } from '@components'
 
@@ -332,6 +333,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .card .alert {
   position: relative !important;

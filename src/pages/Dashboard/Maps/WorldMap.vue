@@ -1,6 +1,7 @@
 <template>
   <div id="worldMap"/>
 </template>
+
 <script>
 import $ from 'jquery'
 export default {

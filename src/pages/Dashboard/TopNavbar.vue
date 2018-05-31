@@ -28,57 +28,25 @@
 
     <template slot="navbar-menu">
 
-      <form>
-        <div class="input-group no-border">
-          <fg-input
-            placeholder="Search..."
-            addon-right-icon="now-ui-icons ui-1_zoom-bold"/>
-        </div>
-      </form>
-
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#pablo">
-            <i class="now-ui-icons media-2_sound-wave"/>
-            <p>
-              <span class="d-lg-none d-md-block">Stats</span>
-            </p>
-          </a>
-        </li>
         <drop-down
           tag="li"
           position="right"
           class="nav-item"
           icon="now-ui-icons location_world">
-
           <a
             class="dropdown-item"
-            href="#">Action</a>
+            href="#">English</a>
           <a
             class="dropdown-item"
-            href="#">Another action</a>
-          <a
-            class="dropdown-item"
-            href="#">Something else here</a>
+            href="#">Dutch (Coming Soon)</a>
         </drop-down>
-
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#pablo">
-            <i class="now-ui-icons users_single-02"/>
-            <p>
-              <span class="d-lg-none d-md-block">Account</span>
-            </p>
-          </a>
-        </li>
       </ul>
 
     </template>
   </navbar>
 </template>
+
 <script>
 import { RouteBreadCrumb, Navbar, NavbarToggleButton } from '@components'
 import { CollapseTransition } from 'vue2-transitions'

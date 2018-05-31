@@ -1,12 +1,13 @@
 <template>
   <div class="col-md-12">
     <card>
-      <async-world-map 
-        :data="mapData" 
+      <async-world-map
+        :data="mapData"
         class="map map-big"/>
     </card>
   </div>
 </template>
+
 <script>
 import AsyncWorldMap from '@components/WorldMap/AsyncWorldMap.vue'
 
@@ -33,6 +34,7 @@ export default {
   },
 }
 </script>
+
 <style>
 #worldMap {
   width: 100%;

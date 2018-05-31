@@ -8,8 +8,11 @@
         slot-scope="props"
         slot="links">
         <user-menu/>
-        <sidebar-item :link="{name: 'Dashboard', icon: 'now-ui-icons design_app', path: '/dashboard'}"/>
-        <sidebar-item :link="{name: 'Pages', icon: 'now-ui-icons design_image'}">
+        <sidebar-item :link="{name: 'Dashboard', icon: 'fa fa-dashboard', path: '/dashboard'}"/>
+        <sidebar-item :link="{name: 'Games', icon: 'fa fa-futbol-o', path: '/404'}"/>
+        <sidebar-item :link="{name: 'Notifications', icon: 'fa fa-flash', path: '/404'}"/>
+
+        <!-- <sidebar-item :link="{name: 'Pages', icon: 'now-ui-icons design_image'}">
           <sidebar-item :link="{name: 'Pricing', path: '/pricing'}"/>
           <sidebar-item :link="{name: 'Timeline', path: '/pages/timeline'}"/>
           <sidebar-item :link="{name: 'Login', path: '/login'}"/>
@@ -42,12 +45,8 @@
           <sidebar-item :link="{name: 'Full Screen Maps', path: '/maps/full-screen'}"/>
           <sidebar-item :link="{name: 'Vector Maps', path: '/maps/vector-map'}"/>
         </sidebar-item>
-        <sidebar-item
-          :link="{name: 'Widgets', icon: 'now-ui-icons objects_diamond', path: '/widgets'}"/>
-        <sidebar-item
-          :link="{name: 'Charts', icon: 'now-ui-icons business_chart-pie-36', path: '/charts'}"/>
-        <sidebar-item
-          :link="{name: 'Calendar', icon: 'now-ui-icons media-1_album', path: '/calendar'}"/>
+        <sidebar-item :link="{name: 'Widgets', icon: 'now-ui-icons objects_diamond', path: '/widgets'}"/>
+        -->
 
       </template>
     </side-bar>
@@ -69,6 +68,7 @@
     </div>
   </div>
 </template>
+
 <script>
 /* eslint-disable no-new */
 import PerfectScrollbar from 'perfect-scrollbar'
@@ -128,6 +128,7 @@ export default {
   },
 }
 </script>
+
 <style lang="scss">
 // stylelint-disable scss/dollar-variable-pattern
 $scaleSize: 0.95;

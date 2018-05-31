@@ -8,7 +8,7 @@
       <div class="table-full-width table-tasks">
         <table class="table">
           <tbody>
-            <task 
+            <task
               v-for="(task, index) in tasks"
               :key="task.title"
               :task="task"
@@ -27,6 +27,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import Task from './Task.vue'
 

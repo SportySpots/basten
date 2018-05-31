@@ -3,8 +3,8 @@
     <div class="row">
       <div class="col-md-4">
         <card>
-          <h4 
-            slot="header" 
+          <h4
+            slot="header"
             class="card-title">Datetimepicker</h4>
           <fg-input>
             <el-date-picker
@@ -16,8 +16,8 @@
       </div>
       <div class="col-md-4">
         <card>
-          <h4 
-            slot="header" 
+          <h4
+            slot="header"
             class="card-title">Date Picker</h4>
           <fg-input>
             <el-date-picker
@@ -29,8 +29,8 @@
       </div>
       <div class="col-md-4">
         <card>
-          <h4 
-            slot="header" 
+          <h4
+            slot="header"
             class="card-title">Time Picker</h4>
           <fg-input>
             <el-time-select
@@ -48,15 +48,15 @@
             <div class="row">
               <div class="col-md-4">
                 <p class="category">Default</p>
-                <n-switch 
-                  v-model="switches.defaultOn" 
-                  type="primary" 
-                  on-text="ON" 
+                <n-switch
+                  v-model="switches.defaultOn"
+                  type="primary"
+                  on-text="ON"
                   off-text="OFF"/>
-                <n-switch 
-                  v-model="switches.defaultOff" 
-                  type="primary" 
-                  on-text="ON" 
+                <n-switch
+                  v-model="switches.defaultOff"
+                  type="primary"
+                  on-text="ON"
                   off-text="OFF"/>
               </div>
               <div class="col-md-4">
@@ -68,19 +68,19 @@
               <div class="col-md-4">
                 <p class="category">With Icons</p>
                 <n-switch v-model="switches.withIconsOn">
-                  <i 
-                    slot="on" 
+                  <i
+                    slot="on"
                     class="now-ui-icons ui-1_check"/>
-                  <i 
-                    slot="off" 
+                  <i
+                    slot="off"
                     class="now-ui-icons ui-1_simple-remove"/>
                 </n-switch>
                 <n-switch v-model="switches.withIconsOff">
-                  <i 
-                    slot="on" 
+                  <i
+                    slot="on"
                     class="now-ui-icons ui-1_check"/>
-                  <i 
-                    slot="off" 
+                  <i
+                    slot="off"
                     class="now-ui-icons ui-1_simple-remove"/>
                 </n-switch>
               </div>
@@ -90,12 +90,12 @@
             <h4 class="card-title">Customisable Select</h4>
             <div class="row">
               <div class="col-md-6">
-                <el-select 
+                <el-select
                   v-model="selects.simple"
                   class="select-primary"
                   size="large"
                   placeholder="Single Select">
-                  <el-option 
+                  <el-option
                     v-for="option in selects.countries"
                     :value="option.value"
                     :label="option.label"
@@ -104,14 +104,14 @@
                 </el-select>
               </div>
               <div class="col-md-6">
-                <el-select 
-                  v-model="selects.multiple" 
+                <el-select
+                  v-model="selects.multiple"
                   multiple
                   class="select-info"
                   size="large"
                   collapse-tags
                   placeholder="Multiple Select">
-                  <el-option 
+                  <el-option
                     v-for="option in selects.countries"
                     :value="option.value"
                     :label="option.label"
@@ -138,8 +138,8 @@
               {{ tag }}
             </el-tag>
 
-            <input 
-              ref="saveTagInput" 
+            <input
+              ref="saveTagInput"
               v-model="tags.inputValue"
               type="text"
               placeholder="New Tag"
@@ -154,7 +154,7 @@
             <div class="row">
               <div class="col-xl-4 col-md-6">
                 <drop-down>
-                  <n-button 
+                  <n-button
                     slot="title"
                     class="dropdown-toggle"
                     data-toggle="dropdown"
@@ -166,21 +166,21 @@
                     Dropdown
                   </n-button>
                   <h6 class="dropdown-header">Dropdown header</h6>
-                  <a 
-                    class="dropdown-item" 
+                  <a
+                    class="dropdown-item"
                     href="#">Action</a>
-                  <a 
-                    class="dropdown-item" 
+                  <a
+                    class="dropdown-item"
                     href="#">Another action</a>
-                  <a 
-                    class="dropdown-item" 
+                  <a
+                    class="dropdown-item"
                     href="#">Something else here</a>
                 </drop-down>
               </div>
 
               <div class="col-xl-4 col-md-6">
                 <drop-down direction="up">
-                  <n-button 
+                  <n-button
                     slot="title"
                     class="dropdown-toggle"
                     data-toggle="dropdown"
@@ -192,14 +192,14 @@
                     Dropup
                   </n-button>
                   <h6 class="dropdown-header">Dropdown header</h6>
-                  <a 
-                    class="dropdown-item" 
+                  <a
+                    class="dropdown-item"
                     href="#">Action</a>
-                  <a 
-                    class="dropdown-item" 
+                  <a
+                    class="dropdown-item"
                     href="#">Another action</a>
-                  <a 
-                    class="dropdown-item" 
+                  <a
+                    class="dropdown-item"
                     href="#">Something else here</a>
                 </drop-down>
               </div>
@@ -211,21 +211,21 @@
         <div class="row">
           <div class="col-md-6">
             <h4 class="card-title">Progress Bars</h4>
-            <n-progress 
-              :value="25" 
-              label="Default" 
+            <n-progress
+              :value="25"
+              label="Default"
               show-value/>
-            <n-progress 
-              :value="60" 
-              label="Primary" 
-              type="primary" 
+            <n-progress
+              :value="60"
+              label="Primary"
+              type="primary"
               show-value/>
           </div>
           <div class="col-md-6">
             <h4 class="card-title">Sliders</h4>
             <slider v-model="sliders.simple"/>
             <br>
-            <slider 
+            <slider
               v-model="sliders.rangeSlider"
               :connect="true"
               type="primary"/>
@@ -236,6 +236,7 @@
     </card> <!-- end card -->
   </div>
 </template>
+
 <script>
 import {
   TimeSelect,
@@ -348,6 +349,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .extended-forms .el-select {
   width: 100%;

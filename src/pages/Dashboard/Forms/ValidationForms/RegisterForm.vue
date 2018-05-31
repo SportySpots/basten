@@ -7,7 +7,7 @@
         </h4>
       </div>
       <div>
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.email"
           :error="getError('email')"
           v-model="model.email"
@@ -16,7 +16,7 @@
           name="email"
           label="Email address"/>
 
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.password"
           :error="getError('password')"
           v-model="model.password"
@@ -25,7 +25,7 @@
           type="password"
           name="password"/>
 
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.confirmPassword"
           :error="getError('confirm')"
           v-model="model.confirmPassword"
@@ -36,24 +36,25 @@
         <div class="category form-category">* Required fields</div>
 
       </div>
-      <div 
-        slot="footer" 
+      <div
+        slot="footer"
         class="text-right">
-        <checkbox 
+        <checkbox
           v-model="model.subscribe"
           class="pull-left"
           name="subscribe">
           Subscribe to newsletter
         </checkbox>
-        <n-button 
-          native-type="submit" 
-          type="primary" 
+        <n-button
+          native-type="submit"
+          type="primary"
           @click.native.prevent="validate">Register</n-button>
       </div>
 
     </card>
   </form>
 </template>
+
 <script>
 import { Checkbox } from '@components/index'
 

@@ -1,8 +1,8 @@
 <template>
   <form class="form-horizontal">
     <card>
-      <h4 
-        slot="header" 
+      <h4
+        slot="header"
         class="card-title">
         Type Validation
       </h4>
@@ -10,7 +10,7 @@
         <div class="row">
           <label class="col-sm-2 col-form-label">Requred Text</label>
           <div class="col-sm-7">
-            <fg-input 
+            <fg-input
               v-validate="modelValidations.required"
               v-model="model.required"
               :error="getError('required')"
@@ -22,7 +22,7 @@
         <div class="row">
           <label class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-7">
-            <fg-input 
+            <fg-input
               v-validate="modelValidations.email"
               v-model="model.email"
               :error="getError('email')"
@@ -34,7 +34,7 @@
         <div class="row">
           <label class="col-sm-2 col-form-label">Number</label>
           <div class="col-sm-7">
-            <fg-input 
+            <fg-input
               v-validate="modelValidations.number"
               v-model="model.number"
               :error="getError('number')"
@@ -46,7 +46,7 @@
         <div class="row">
           <label class="col-sm-2 col-form-label">Url</label>
           <div class="col-sm-7">
-            <fg-input 
+            <fg-input
               v-validate="modelValidations.url"
               v-model="model.url"
               :error="getError('url')"
@@ -58,7 +58,7 @@
         <div class="row">
           <label class="col-sm-2 col-form-label">Url</label>
           <div class="col-sm-3">
-            <fg-input 
+            <fg-input
               v-validate="modelValidations.equalToSource"
               v-model="model.equalToSource"
               :error="getError('equalToSource')"
@@ -66,7 +66,7 @@
               placeholder="Source field"/>
           </div>
           <div class="col-sm-3">
-            <fg-input 
+            <fg-input
               v-validate="modelValidations.equalToDest"
               v-model="model.equalToDest"
               :error="getError('equalToDest')"
@@ -79,15 +79,16 @@
 
       </div>
       <div class="text-center">
-        <n-button 
-          native-type="submit" 
-          type="primary" 
+        <n-button
+          native-type="submit"
+          type="primary"
           @click.native.prevent="validate">Validate inputs</n-button>
       </div>
 
     </card>
   </form>
 </template>
+
 <script>
 export default {
   data() {

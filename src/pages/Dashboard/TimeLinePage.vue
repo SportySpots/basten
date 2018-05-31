@@ -92,6 +92,7 @@
   </div>
 
 </template>
+
 <script>
 import { TimeLine, TimeLineItem } from '@components'
 export default {

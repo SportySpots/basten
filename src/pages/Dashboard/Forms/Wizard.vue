@@ -13,8 +13,8 @@
               <i class="now-ui-icons users_circle-08"/>
               About
             </template>
-            <first-step 
-              ref="step1" 
+            <first-step
+              ref="step1"
               @on-validated="onStepValidated"/>
           </wizard-tab>
 
@@ -23,8 +23,8 @@
               <i class="now-ui-icons ui-1_settings-gear-63"/>
               Account
             </template>
-            <second-step 
-              ref="step2" 
+            <second-step
+              ref="step2"
               @on-validated="onStepValidated"/>
           </wizard-tab>
 
@@ -40,6 +40,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import FirstStep from './Wizard/FirstStep.vue'
 import SecondStep from './Wizard/SecondStep.vue'

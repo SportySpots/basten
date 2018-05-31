@@ -197,6 +197,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { TabPane, Tabs, Collapse, CollapseItem } from '@components'
 

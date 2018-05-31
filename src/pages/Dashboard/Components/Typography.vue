@@ -100,6 +100,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Breadcrumb, BreadcrumbItem } from '@components/index'
 

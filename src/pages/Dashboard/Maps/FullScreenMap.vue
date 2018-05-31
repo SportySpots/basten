@@ -1,8 +1,9 @@
 <template>
-  <div 
-    id="map" 
+  <div
+    id="map"
     class="full-screen-map"/>
 </template>
+
 <script>
 import GoogleMapsLoader from 'google-maps'
 import { API_KEY } from './API_KEY'
@@ -218,6 +219,7 @@ export default {
   },
 }
 </script>
+
 <style>
 #map {
   height: 100vh;

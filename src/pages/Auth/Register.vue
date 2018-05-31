@@ -37,25 +37,23 @@
         </div>
       </div>
     </div>
+
     <div class="col-lg-4 mr-auto">
-      <card
-        class="card-signup text-center"
-        no-footer-line>
+      <form @submit.prevent>
+        <card class="card-signup text-center">
 
-        <template slot="header">
-          <h4 class="card-title">Register</h4>
-          <div class="social">
-            <button class="btn btn-icon btn-round btn-facebook">
-              <i class="fa fa-facebook"/>
-            </button>
-            <button class="btn btn-icon btn-round btn-twitter">
-              <i class="fa fa-twitter"/>
-            </button>
-            <h5 class="card-description"> or be classical </h5>
-          </div>
-        </template>
-
-        <form @submit.prevent>
+          <template slot="header">
+            <h4 class="card-title">Register</h4>
+            <div class="social">
+              <button class="btn btn-icon btn-round btn-facebook">
+                <i class="fa fa-facebook"/>
+              </button>
+              <button class="btn btn-icon btn-round btn-twitter">
+                <i class="fa fa-twitter"/>
+              </button>
+              <h5 class="card-description"> or be classical </h5>
+            </div>
+          </template>
 
           <fg-input
             placeholder="First Name..."
@@ -76,16 +74,23 @@
           <checkbox class="text-left">
             I agree to the <a href="#something">terms and conditions</a>.
           </checkbox>
-        </form>
-        <a
-          slot="footer"
-          href="#pablo"
-          class="btn btn-primary btn-round btn-lg">Get Started</a>
 
-      </card>
+          <div slot="footer">
+            <n-button
+              type="primary"
+              round
+              block>
+              Get Started
+            </n-button>
+          </div>
+
+        </card>
+      </form>
     </div>
+
   </div>
 </template>
+
 <script>
 import { Checkbox } from '@components'
 export default {

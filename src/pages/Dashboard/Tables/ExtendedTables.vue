@@ -7,60 +7,60 @@
       <div class="row">
         <div class="col-sm-12">
           <el-table :data="tableData">
-            <el-table-column 
-              min-width="50" 
+            <el-table-column
+              min-width="50"
               type="index"/>
-            <el-table-column 
-              min-width="150" 
+            <el-table-column
+              min-width="150"
               prop="name"
               label="Name"/>
-            <el-table-column 
-              min-width="200" 
+            <el-table-column
+              min-width="200"
               prop="job"
               label="Job Position"/>
-            <el-table-column 
-              min-width="150" 
+            <el-table-column
+              min-width="150"
               prop="salary"
               label="Salary"/>
-            <el-table-column 
+            <el-table-column
               min-width="150"
               header-align="right"
               label="Actions">
-              <div 
-                slot-scope="{row}" 
+              <div
+                slot-scope="{row}"
                 class="text-right table-actions">
-                <el-tooltip 
+                <el-tooltip
                   :open-delay="300"
                   content="Info"
                   placement="top">
-                  <n-button 
-                    type="info" 
-                    size="sm" 
+                  <n-button
+                    type="info"
+                    size="sm"
                     icon>
                     <i class="now-ui-icons users_single-02"/>
                   </n-button>
                 </el-tooltip>
 
 
-                <el-tooltip 
+                <el-tooltip
                   :open-delay="300"
                   content="Settings"
                   placement="top">
-                  <n-button 
-                    type="success" 
-                    size="sm" 
+                  <n-button
+                    type="success"
+                    size="sm"
                     icon>
                     <i class="now-ui-icons ui-2_settings-90"/>
                   </n-button>
                 </el-tooltip>
 
-                <el-tooltip 
+                <el-tooltip
                   :open-delay="300"
                   content="Delete"
                   placement="top">
-                  <n-button 
-                    type="danger" 
-                    size="sm" 
+                  <n-button
+                    type="danger"
+                    size="sm"
                     icon>
                     <i class="now-ui-icons ui-1_simple-remove"/>
                   </n-button>
@@ -78,24 +78,24 @@
       </div>
       <div class="row table-full-width">
         <div class="col-sm-12">
-          <el-table 
+          <el-table
             :data="tableData"
             stripe>
             <el-table-column type="index"/>
             <el-table-column width="60">
-              <div 
-                slot-scope="{row}" 
+              <div
+                slot-scope="{row}"
                 class="checkbox-cell">
                 <n-checkbox v-model="row.active"/>
               </div>
             </el-table-column>
-            <el-table-column 
+            <el-table-column
               prop="name"
               label="Name"/>
-            <el-table-column 
+            <el-table-column
               prop="job"
               label="Job Position"/>
-            <el-table-column 
+            <el-table-column
               prop="salary"
               label="Salary"/>
 
@@ -116,6 +116,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Table, TableColumn } from 'element-ui'
 import { Checkbox } from '@components'
@@ -166,6 +167,7 @@ export default {
   },
 }
 </script>
+
 <style lang="scss">
 .checkbox-cell {
   display: flex;

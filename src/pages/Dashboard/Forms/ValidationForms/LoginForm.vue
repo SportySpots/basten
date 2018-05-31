@@ -7,7 +7,7 @@
         </h4>
       </div>
       <div>
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.fullName"
           v-model="model.fullName"
           :error="getError('full name')"
@@ -15,7 +15,7 @@
           required
           name="full name"/>
 
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.email"
           v-model="model.email"
           :error="getError('email')"
@@ -24,7 +24,7 @@
           name="email"
           type="email"/>
 
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.password"
           v-model="model.password"
           :error="getError('password')"
@@ -34,14 +34,15 @@
           type="password"/>
       </div>
       <div class="d-flex justify-content-center">
-        <n-button 
-          native-type="submit" 
-          type="primary" 
+        <n-button
+          native-type="submit"
+          type="primary"
           @click.native.prevent="validate">Login</n-button>
       </div>
     </card>
   </form>
 </template>
+
 <script>
 export default {
   data() {

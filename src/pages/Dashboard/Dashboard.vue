@@ -67,43 +67,43 @@
 
     <div class="row">
       <div class="col-lg-4">
-        <card 
-          class="card-chart" 
+        <card
+          class="card-chart"
           no-footer-line>
           <div slot="header">
             <h5 class="card-category">Active Users</h5>
             <h2 class="card-title">
               <animated-number :value="34252"/>
             </h2>
-            <drop-down 
-              :hide-arrow="true" 
+            <drop-down
+              :hide-arrow="true"
               position="right">
-              <n-button 
-                slot="title" 
-                class="dropdown-toggle no-caret" 
-                round 
-                simple 
+              <n-button
+                slot="title"
+                class="dropdown-toggle no-caret"
+                round
+                simple
                 icon>
                 <i class="now-ui-icons loader_gear"/>
               </n-button>
 
-              <a 
-                class="dropdown-item" 
+              <a
+                class="dropdown-item"
                 href="#">Action</a>
-              <a 
-                class="dropdown-item" 
+              <a
+                class="dropdown-item"
                 href="#">Another action</a>
-              <a 
-                class="dropdown-item" 
+              <a
+                class="dropdown-item"
                 href="#">Something else here</a>
-              <a 
-                class="dropdown-item text-danger" 
+              <a
+                class="dropdown-item text-danger"
                 href="#">Remove Data</a>
             </drop-down>
 
           </div>
           <div class="chart-area">
-            <line-chart 
+            <line-chart
               :labels="charts.activeUsers.labels"
               :data="charts.activeUsers.data"
               :color="charts.activeUsers.color"
@@ -127,8 +127,8 @@
               </template>
             </n-table>
           </div>
-          <div 
-            slot="footer" 
+          <div
+            slot="footer"
             class="stats">
             <i class="now-ui-icons arrows-1_refresh-69"/> Just Updated
           </div>
@@ -136,8 +136,8 @@
       </div>
 
       <div class="col-lg-4">
-        <card 
-          class="card-chart" 
+        <card
+          class="card-chart"
           no-footer-line>
           <div slot="header">
             <h5 class="card-category">Summer Email Campaign</h5>
@@ -145,65 +145,65 @@
               <animated-number :value="55300"/>
             </h2>
             <drop-down position="right">
-              <n-button 
-                slot="title" 
-                class="dropdown-toggle no-caret" 
-                round 
-                simple 
+              <n-button
+                slot="title"
+                class="dropdown-toggle no-caret"
+                round
+                simple
                 icon>
                 <i class="now-ui-icons loader_gear"/>
               </n-button>
 
-              <a 
-                class="dropdown-item" 
+              <a
+                class="dropdown-item"
                 href="#">Action</a>
-              <a 
-                class="dropdown-item" 
+              <a
+                class="dropdown-item"
                 href="#">Another action</a>
-              <a 
-                class="dropdown-item" 
+              <a
+                class="dropdown-item"
                 href="#">Something else here</a>
-              <a 
-                class="dropdown-item text-danger" 
+              <a
+                class="dropdown-item text-danger"
                 href="#">Remove Data</a>
             </drop-down>
 
           </div>
           <div class="chart-area">
-            <line-chart 
+            <line-chart
               :labels="charts.emailsCampaign.labels"
               :data="charts.emailsCampaign.data"
               :color="charts.emailsCampaign.color"
               :height="200"/>
           </div>
           <div class="card-progress">
-            <n-progress 
-              :value="90" 
-              label="Delivery Rate" 
+            <n-progress
+              :value="90"
+              label="Delivery Rate"
               show-value/>
-            <n-progress 
-              :value="60" 
-              type="success" 
-              label="Open Rate" 
+            <n-progress
+              :value="60"
+              type="success"
+              label="Open Rate"
               show-value/>
-            <n-progress 
-              :value="12" 
-              type="info" 
-              label="Click Rate" 
+            <n-progress
+              :value="12"
+              type="info"
+              label="Click Rate"
               show-value/>
-            <n-progress 
-              :value="5" 
-              type="warning" 
-              label="Hard Bounce" 
+            <n-progress
+              :value="5"
+              type="warning"
+              label="Hard Bounce"
               show-value/>
-            <n-progress 
-              :value="0.11" 
-              type="danger" 
-              label="Spam Report" 
+            <n-progress
+              :value="0.11"
+              type="danger"
+              label="Spam Report"
               show-value/>
           </div>
-          <div 
-            slot="footer" 
+          <div
+            slot="footer"
             class="stats">
             <i class="now-ui-icons arrows-1_refresh-69"/> Just Updated
           </div>
@@ -211,8 +211,8 @@
       </div>
 
       <div class="col-lg-4">
-        <card 
-          class="card-chart" 
+        <card
+          class="card-chart"
           no-footer-line>
           <div slot="header">
             <h5 class="card-category">Active Countries</h5>
@@ -221,19 +221,19 @@
             </h2>
           </div>
           <div class="chart-area">
-            <line-chart 
+            <line-chart
               :labels="charts.activeCountries.labels"
               :data="charts.activeCountries.data"
               :color="charts.activeCountries.color"
               :height="200"/>
           </div>
 
-          <async-world-map 
-            :data="mapData" 
+          <async-world-map
+            :data="mapData"
             class="map"/>
 
-          <div 
-            slot="footer" 
+          <div
+            slot="footer"
             class="stats">
             <i class="now-ui-icons arrows-1_refresh-69"/> Just Updated
           </div>
@@ -244,12 +244,12 @@
     <div class="row">
       <div class="col-md-12">
         <card>
-          <h4 
-            slot="header" 
+          <h4
+            slot="header"
             class="card-title">Best Selling Products</h4>
           <div class="table-responsive">
-            <n-table 
-              :data="productsTable" 
+            <n-table
+              :data="productsTable"
               class="table-shopping">
               <template slot="columns">
                 <th class="text-center"/>
@@ -269,8 +269,8 @@
               <template slot-scope="{row}">
                 <td>
                   <div class="img-container">
-                    <img 
-                      :src="row.image" 
+                    <img
+                      :src="row.image"
                       alt="...">
                   </div>
                 </td>
@@ -311,6 +311,7 @@
 
   </div>
 </template>
+
 <script>
 import {
   StatsCard,

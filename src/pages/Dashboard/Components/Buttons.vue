@@ -22,43 +22,43 @@
             </div>
             <div class="card-body">
               <n-button>
-                <i 
-                  slot="label" 
+                <i
+                  slot="label"
                   class="now-ui-icons arrows-1_minimal-left"/>
                 Left
               </n-button>
 
               <n-button>
                 Right
-                <i 
-                  slot="labelRight" 
+                <i
+                  slot="labelRight"
                   class="now-ui-icons arrows-1_minimal-right"/>
               </n-button>
 
               <n-button type="info">
-                <i 
-                  slot="label" 
+                <i
+                  slot="label"
                   class="now-ui-icons travel_info"/>
                 Info
               </n-button>
 
               <n-button type="success">
-                <i 
-                  slot="label" 
+                <i
+                  slot="label"
                   class="now-ui-icons ui-1_check"/>
                 Success
               </n-button>
 
               <n-button type="warning">
-                <i 
-                  slot="label" 
+                <i
+                  slot="label"
                   class="now-ui-icons ui-2_time-alarm"/>
                 Warning
               </n-button>
 
               <n-button type="danger">
-                <i 
-                  slot="label" 
+                <i
+                  slot="label"
                   class="now-ui-icons ui-1_simple-remove"/>
                 Danger
               </n-button>
@@ -74,12 +74,12 @@
               <h4 class="card-title">Pick your Size</h4>
             </div>
             <div class="card-body">
-              <n-button 
-                type="primary" 
+              <n-button
+                type="primary"
                 size="sm">Small</n-button>
               <n-button type="primary">Regular</n-button>
-              <n-button 
-                type="primary" 
+              <n-button
+                type="primary"
                 size="lg">Large</n-button>
             </div>
           </div>
@@ -89,25 +89,25 @@
             </div>
             <div class="card-body">
               <n-button type="primary">Default</n-button>
-              <n-button 
-                type="primary" 
+              <n-button
+                type="primary"
                 round>round</n-button>
-              <n-button 
-                type="primary" 
+              <n-button
+                type="primary"
                 round>
-                <i 
-                  slot="label" 
+                <i
+                  slot="label"
                   class="now-ui-icons ui-2_favourite-28"/>
                 with icon
               </n-button>
-              <n-button 
-                type="primary" 
-                round 
+              <n-button
+                type="primary"
+                round
                 icon>
                 <i class="now-ui-icons ui-2_favourite-28"/>
               </n-button>
-              <n-button 
-                type="primary" 
+              <n-button
+                type="primary"
                 simple>Simple</n-button>
             </div>
 
@@ -122,11 +122,11 @@
             </div>
 
             <div class="card-body">
-              <n-pagination 
-                :page-count="10" 
+              <n-pagination
+                :page-count="10"
                 v-model="defaultPagination"/>
-              <n-pagination 
-                :page-count="10" 
+              <n-pagination
+                :page-count="10"
                 v-model="infoPagination"/>
             </div>
           </div>
@@ -137,41 +137,41 @@
             </div>
             <div class="card-body">
               <div class="btn-group">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">Left</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">Middle</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">Right</button>
               </div>
 
               <br><br>
               <div class="btn-group">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">1</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">2</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">3</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-outline">4</button>
               </div>
               <div class="btn-group">
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-round btn-outline">5</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-round btn-outline">6</button>
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   class="btn btn-info btn-round btn-outline">7</button>
               </div>
             </div>
@@ -242,86 +242,86 @@
 
             <div class="col-md-1 col-sm-1">
               <p class="category">&nbsp;</p>
-              <n-button 
-                class="btn-twitter" 
-                social 
+              <n-button
+                class="btn-twitter"
+                social
                 icon>
                 <i class="fa fa-twitter"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-facebook" 
-                social 
+              <n-button
+                class="btn-facebook"
+                social
                 icon>
                 <i class="fa fa-facebook"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-google" 
-                social 
+              <n-button
+                class="btn-google"
+                social
                 icon>
                 <i class="fa fa-google-plus"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-linkedin" 
-                social 
+              <n-button
+                class="btn-linkedin"
+                social
                 icon>
                 <i class="fa fa-linkedin"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-pinterest" 
-                social 
+              <n-button
+                class="btn-pinterest"
+                social
                 icon>
                 <i class="fa fa-pinterest"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-youtube" 
-                social 
+              <n-button
+                class="btn-youtube"
+                social
                 icon>
                 <i class="fa fa-youtube"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-tumblr" 
-                social 
+              <n-button
+                class="btn-tumblr"
+                social
                 icon>
                 <i class="fa fa-tumblr"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-github" 
-                social 
+              <n-button
+                class="btn-github"
+                social
                 icon>
                 <i class="fa fa-github"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-behance" 
-                social 
+              <n-button
+                class="btn-behance"
+                social
                 icon>
                 <i class="fa fa-behance"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-dribbble" 
-                social 
+              <n-button
+                class="btn-dribbble"
+                social
                 icon>
                 <i class="fa fa-dribbble"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-reddit" 
-                social 
+              <n-button
+                class="btn-reddit"
+                social
                 icon>
                 <i class="fa fa-reddit"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-stumbleupon" 
-                social 
+              <n-button
+                class="btn-stumbleupon"
+                social
                 icon>
                 <i class="fa fa-stumbleupon"/>
               </n-button>
@@ -329,98 +329,98 @@
             </div>
             <div class="col-md-1 col-sm-1">
               <p class="category">&nbsp;</p>
-              <n-button 
-                class="btn-twitter" 
-                social 
-                icon 
+              <n-button
+                class="btn-twitter"
+                social
+                icon
                 round>
                 <i class="fa fa-twitter"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-facebook" 
-                social 
-                icon 
+              <n-button
+                class="btn-facebook"
+                social
+                icon
                 round>
                 <i class="fa fa-facebook"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-google" 
-                social 
-                icon 
+              <n-button
+                class="btn-google"
+                social
+                icon
                 round>
                 <i class="fa fa-google-plus"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-linkedin" 
-                social 
-                icon 
+              <n-button
+                class="btn-linkedin"
+                social
+                icon
                 round>
                 <i class="fa fa-linkedin"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-pinterest" 
-                social 
-                icon 
+              <n-button
+                class="btn-pinterest"
+                social
+                icon
                 round>
                 <i class="fa fa-pinterest"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-youtube" 
-                social 
-                icon 
+              <n-button
+                class="btn-youtube"
+                social
+                icon
                 round>
                 <i class="fa fa-youtube"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-tumblr" 
-                social 
-                icon 
+              <n-button
+                class="btn-tumblr"
+                social
+                icon
                 round>
                 <i class="fa fa-tumblr"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-github" 
-                social 
-                icon 
+              <n-button
+                class="btn-github"
+                social
+                icon
                 round>
                 <i class="fa fa-github"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-behance" 
-                social 
-                icon 
+              <n-button
+                class="btn-behance"
+                social
+                icon
                 round>
                 <i class="fa fa-behance"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-dribbble" 
-                social 
-                icon 
+              <n-button
+                class="btn-dribbble"
+                social
+                icon
                 round>
                 <i class="fa fa-dribbble"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-reddit" 
-                social 
-                icon 
+              <n-button
+                class="btn-reddit"
+                social
+                icon
                 round>
                 <i class="fa fa-reddit"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-stumbleupon" 
-                social 
-                icon 
+              <n-button
+                class="btn-stumbleupon"
+                social
+                icon
                 round>
                 <i class="fa fa-stumbleupon"/>
               </n-button>
@@ -429,86 +429,86 @@
             </div>
             <div class="col-md-1 col-sm-1">
               <p class="category">Neutral</p>
-              <n-button 
-                class="btn-twitter" 
-                type="neutral" 
+              <n-button
+                class="btn-twitter"
+                type="neutral"
                 social>
                 <i class="fa fa-twitter"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-facebook" 
-                type="neutral" 
+              <n-button
+                class="btn-facebook"
+                type="neutral"
                 social>
                 <i class="fa fa-facebook"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-google" 
-                type="neutral" 
+              <n-button
+                class="btn-google"
+                type="neutral"
                 social>
                 <i class="fa fa-google-plus"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-linkedin" 
-                type="neutral" 
+              <n-button
+                class="btn-linkedin"
+                type="neutral"
                 social>
                 <i class="fa fa-linkedin"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-pinterest" 
-                type="neutral" 
+              <n-button
+                class="btn-pinterest"
+                type="neutral"
                 social>
                 <i class="fa fa-pinterest"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-youtube" 
-                type="neutral" 
+              <n-button
+                class="btn-youtube"
+                type="neutral"
                 social>
                 <i class="fa fa-youtube"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-tumblr" 
-                type="neutral" 
+              <n-button
+                class="btn-tumblr"
+                type="neutral"
                 social>
                 <i class="fa fa-tumblr"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-github" 
-                type="neutral" 
+              <n-button
+                class="btn-github"
+                type="neutral"
                 social>
                 <i class="fa fa-github"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-behance" 
-                type="neutral" 
+              <n-button
+                class="btn-behance"
+                type="neutral"
                 social>
                 <i class="fa fa-behance"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-dribbble" 
-                type="neutral" 
+              <n-button
+                class="btn-dribbble"
+                type="neutral"
                 social>
                 <i class="fa fa-dribbble"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-reddit" 
-                type="neutral" 
+              <n-button
+                class="btn-reddit"
+                type="neutral"
                 social>
                 <i class="fa fa-reddit"/>
               </n-button>
               <br>
-              <n-button 
-                class="btn-stumbleupon" 
-                type="neutral" 
+              <n-button
+                class="btn-stumbleupon"
+                type="neutral"
                 social>
                 <i class="fa fa-stumbleupon"/>
               </n-button>
@@ -517,74 +517,74 @@
             </div>
             <div class="col-md-3 col-sm-4">
               <p class="category">&nbsp;</p>
-              <n-button 
-                class="btn-twitter" 
+              <n-button
+                class="btn-twitter"
                 type="neutral">
                 <i class="fa fa-twitter"/> Connect with Twitter
               </n-button>
               <br>
-              <n-button 
-                class="btn-facebook" 
+              <n-button
+                class="btn-facebook"
                 type="neutral">
                 <i class="fa fa-facebook-square"/> Share · 2.2k
               </n-button>
               <br>
-              <n-button 
-                class="btn-google" 
+              <n-button
+                class="btn-google"
                 type="neutral">
                 <i class="fa fa-google-plus-square"/> Share on Google+
               </n-button>
               <br>
-              <n-button 
-                class="btn-linkedin" 
+              <n-button
+                class="btn-linkedin"
                 type="neutral">
                 <i class="fa fa-linkedin-square"/> Connect with Linkedin
               </n-button>
               <br>
-              <n-button 
-                class="btn-pinterest" 
+              <n-button
+                class="btn-pinterest"
                 type="neutral">
                 <i class="fa fa-pinterest"/> Pint it · 212
               </n-button>
               <br>
-              <n-button 
-                class="btn-youtube" 
+              <n-button
+                class="btn-youtube"
                 type="neutral">
                 <i class="fa fa-youtube-play"/> View on Youtube
               </n-button>
               <br>
-              <n-button 
-                class="btn-tumblr" 
+              <n-button
+                class="btn-tumblr"
                 type="neutral">
                 <i class="fa fa-tumblr-square"/> Repost
               </n-button>
               <br>
-              <n-button 
-                class="btn-github" 
+              <n-button
+                class="btn-github"
                 type="neutral">
                 <i class="fa fa-github"/> Connect with Github
               </n-button>
               <br>
-              <n-button 
-                class="btn-behance" 
+              <n-button
+                class="btn-behance"
                 type="neutral">
                 <i class="fa fa-behance-square"/> Follow us
               </n-button>
               <br>
-              <n-button 
-                class="btn-dribbble" 
+              <n-button
+                class="btn-dribbble"
                 type="neutral">
                 <i class="fa fa-dribbble"/> Find us on Dribbble
               </n-button>
               <br>
-              <n-button 
-                class="btn-reddit" 
+              <n-button
+                class="btn-reddit"
                 type="neutral">
                 <i class="fa fa-reddit"/> Repost · 232
               </n-button>
               <br>
-              <n-button 
-                class="btn-stumbleupon" 
+              <n-button
+                class="btn-stumbleupon"
                 type="neutral">
                 <i class="fa fa-stumbleupon"/> View on StumbleUpon
               </n-button>
@@ -598,6 +598,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Pagination } from '@components'
 

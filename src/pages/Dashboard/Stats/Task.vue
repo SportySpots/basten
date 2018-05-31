@@ -31,6 +31,7 @@
     </td>
   </tr>
 </template>
+
 <script>
 export default {
   props: {

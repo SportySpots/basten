@@ -4,22 +4,22 @@
     <div class="row justify-content-center">
       <div class="col-sm-4">
         <div class="picture-container">
-          <el-upload 
+          <el-upload
             :on-change="handlePreview"
             :auto-upload="false"
             :show-file-list="false"
             class="picture"
             action="https://jsonplaceholder.typicode.com/posts/">
-            <img 
-              v-if="model.imageUrl" 
-              :src="model.imageUrl" 
+            <img
+              v-if="model.imageUrl"
+              :src="model.imageUrl"
               class="picture-src">
           </el-upload>
           <h6 class="description">Choose Picture</h6>
         </div>
       </div>
       <div class="col-sm-6">
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.firstName"
           v-model="model.firstName"
           :error="getError('firstName')"
@@ -28,7 +28,7 @@
           placeholder="First Name (required)"
           addon-left-icon="now-ui-icons users_circle-08"/>
 
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.lastName"
           v-model="model.lastName"
           :error="getError('lastName')"
@@ -38,7 +38,7 @@
           addon-left-icon="now-ui-icons text_caps-small"/>
       </div>
       <div class="col-12 col-sm-10 mt-3">
-        <fg-input 
+        <fg-input
           v-validate="modelValidations.email"
           v-model="model.email"
           :error="getError('email')"
@@ -50,6 +50,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Upload } from 'element-ui'
 

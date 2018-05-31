@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import AuthLayout from '@pages/Dashboard/Pages/AuthLayout.vue'
+import AuthLayout from '@pages/Auth/Layout.vue'
 
 export default {
   components: {

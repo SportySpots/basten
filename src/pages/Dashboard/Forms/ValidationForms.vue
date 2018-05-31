@@ -15,6 +15,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import RegisterForm from './ValidationForms/RegisterForm.vue'
 import LoginForm from './ValidationForms/LoginForm.vue'

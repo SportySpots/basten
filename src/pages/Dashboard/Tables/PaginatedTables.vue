@@ -98,6 +98,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Table, TableColumn, Select, Option } from 'element-ui'
 import { Pagination as NPagination } from '@components'

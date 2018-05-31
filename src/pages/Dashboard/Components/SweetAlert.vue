@@ -5,32 +5,32 @@
         <card>
           <div class="text-center">
             <p class="card-text">Basic example</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('basic')">Try me!</n-button>
           </div>
         </card>
         <card>
           <div class="text-center">
             <p class="card-text">Custom HTML description</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('custom-html')">Try me!</n-button>
           </div>
         </card>
         <card>
           <div class="text-center">
             <p class="card-text">Modal window with input field</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('input-field')">Try me!</n-button>
           </div>
         </card>
         <card>
           <div class="text-center">
             <p class="card-text">A message with auto close timer set to 2 seconds</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('auto-close')">Try me!</n-button>
           </div>
         </card>
@@ -39,8 +39,8 @@
         <card>
           <div class="text-center">
             <p class="card-text">A success message</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('success-message')">Try me!</n-button>
           </div>
         </card>
@@ -48,16 +48,16 @@
           <div class="text-center">
             <p class="card-text">A warning message, with a function attached to the "Confirm"
             Button...</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('warning-message-and-confirmation')">Try me!</n-button>
           </div>
         </card>
         <card>
           <div class="text-center">
             <p class="card-text">A title with a text under</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('title-and-text')">Try me!</n-button>
           </div>
         </card>
@@ -65,8 +65,8 @@
           <div class="text-center">
             <p class="card-text">...and by passing a parameter, you can execute something else
             for "Cancel"</p>
-            <n-button 
-              type="primary" 
+            <n-button
+              type="primary"
               @click.native="showSwal('warning-message-and-cancel')">Try me!</n-button>
           </div>
         </card>
@@ -74,6 +74,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import swal from 'sweetalert2'
 
@@ -195,6 +196,7 @@ export default {
   },
 }
 </script>
+
 <style>
 .el-dialog {
   width: 50%;

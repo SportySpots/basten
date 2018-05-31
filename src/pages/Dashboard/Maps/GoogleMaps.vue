@@ -5,8 +5,8 @@
         <div slot="header">
           <h4 class="card-title">Satellite Map</h4>
         </div>
-        <div 
-          id="satelliteMap" 
+        <div
+          id="satelliteMap"
           class="map map-big"/>
       </card>
     </div>
@@ -15,8 +15,8 @@
         <div slot="header">
           <h4 class="card-title">Regular Map</h4>
         </div>
-        <div 
-          id="regularMap" 
+        <div
+          id="regularMap"
           class="map"/>
       </card>
     </div>
@@ -25,13 +25,14 @@
         <div slot="header">
           <h4 class="card-title">Custom Skin & Settings Map</h4>
         </div>
-        <div 
-          id="customSkinMap" 
+        <div
+          id="customSkinMap"
           class="map"/>
       </card>
     </div>
   </div>
 </template>
+
 <script>
 import { API_KEY } from './API_KEY'
 import GoogleMapsLoader from 'google-maps'
@@ -174,6 +175,7 @@ export default {
   },
 }
 </script>
+
 <style lang="scss">
 .card-map {
   min-height: 350px;

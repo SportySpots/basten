@@ -5,19 +5,19 @@
       <div class="col-lg-10">
         <div class="row">
           <div class="col-sm-4">
-            <icon-checkbox 
+            <icon-checkbox
               v-model="model.design"
               icon="now-ui-icons design-2_ruler-pencil"
               title="Design"/>
           </div>
           <div class="col-sm-4">
-            <icon-checkbox 
+            <icon-checkbox
               v-model="model.code"
               icon="now-ui-icons business_bulb-63"
               title="Code"/>
           </div>
           <div class="col-sm-4">
-            <icon-checkbox 
+            <icon-checkbox
               v-model="model.develop"
               icon="now-ui-icons tech_tv"
               title="Develop"/>
@@ -27,6 +27,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { IconCheckbox } from '@components'
 

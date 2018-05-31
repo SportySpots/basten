@@ -1,28 +1,26 @@
 // import store from '@state/store';
-import DashboardLayout from '@pages/Dashboard/Layout/DashboardLayout.vue'
-import AuthLayout from '@pages/Dashboard/Pages/AuthLayout.vue'
+import DashboardLayout from '@pages/Dashboard/Layout.vue'
+import AuthLayout from '@pages/Auth/Layout.vue'
 import Widgets from '@pages/Dashboard/Widgets.vue'
 
 // GeneralViews
-import NotFound from '@pages/GeneralViews/NotFoundPage.vue'
+import NotFound from '@pages/General/NotFoundPage.vue'
 
 // Page Headers
 import DefaultHeader from '@pages/Dashboard/DefaultHeader'
-import DashboardHeader from '@pages/Dashboard/Dashboard/DashboardHeader.vue'
 import SweetAlertHeader from '@pages/Dashboard/Components/Headers/SweetAlertHeader'
-import CalendarHeader from '@pages/Dashboard/Calendar/CalendarHeader'
 import VectorMapsHeader from '@pages/Dashboard/Maps/VectorMapsHeader'
 
 // Dashboard pages
-import Dashboard from '@pages/Dashboard/Dashboard/Dashboard.vue'
+import Dashboard from '@pages/Dashboard/Dashboard.vue'
 
 // Pages
-const User = () => import('@pages/Dashboard/Pages/UserProfile.vue')
-const Pricing = () => import('@pages/Dashboard/Pages/Pricing.vue')
-const TimeLine = () => import('@pages/Dashboard/Pages/TimeLinePage.vue')
-const Login = () => import('@pages/Dashboard/Pages/Login.vue')
-const Register = () => import('@pages/Dashboard/Pages/Register.vue')
-const Lock = () => import('@pages/Dashboard/Pages/Lock.vue')
+const User = () => import('@pages/Dashboard/Users/UserProfile.vue')
+const Pricing = () => import('@pages/Dashboard/Pricing.vue')
+const TimeLine = () => import('@pages/Dashboard/TimeLinePage.vue')
+const Login = () => import('@pages/Auth/Login.vue')
+const Register = () => import('@pages/Auth/Register.vue')
+const Lock = () => import('@pages/Auth/Lock.vue')
 
 // Components pages
 const Buttons = () => import('@pages/Dashboard/Components/Buttons.vue')
@@ -52,12 +50,6 @@ const PaginatedTables = () =>
 const GoogleMaps = () => import('@pages/Dashboard/Maps/GoogleMaps.vue')
 const FullScreenMap = () => import('@pages/Dashboard/Maps/FullScreenMap.vue')
 const VectorMaps = () => import('@pages/Dashboard/Maps/VectorMaps.vue')
-
-// Calendar
-const Calendar = () => import('@pages/Dashboard/Calendar/CalendarRoute.vue')
-
-// Charts
-const Charts = () => import('@pages/Dashboard/Charts.vue')
 
 let componentsMenu = {
   path: '/components',
@@ -252,17 +244,7 @@ const routes = [
       {
         path: 'dashboard',
         name: 'Dashboard',
-        components: { default: Dashboard, header: DashboardHeader },
-      },
-      {
-        path: 'calendar',
-        name: 'Calendar',
-        components: { default: Calendar, header: CalendarHeader },
-      },
-      {
-        path: 'charts',
-        name: 'Charts',
-        components: { default: Charts, header: DefaultHeader },
+        components: { default: Dashboard, header: DefaultHeader },
       },
       {
         path: 'widgets',

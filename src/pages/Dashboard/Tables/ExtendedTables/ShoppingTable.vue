@@ -1,87 +1,87 @@
 <template>
   <div class="table-shopping">
-    <el-table 
+    <el-table
       :data="productsTable"
       style="width: 100%">
       <el-table-column min-width="220">
-        <div 
-          slot-scope="{row}" 
+        <div
+          slot-scope="{row}"
           class="img-container">
-          <img 
-            :src="row.image" 
+          <img
+            :src="row.image"
             alt="Agenda">
         </div>
       </el-table-column>
-      <el-table-column 
-        min-width="220" 
+      <el-table-column
+        min-width="220"
         label="Product">
-        <div 
-          slot-scope="{row}" 
+        <div
+          slot-scope="{row}"
           class="td-name">
           <a href="#jacket">{{ row.title }}</a>
           <br>
           <small>{{ row.description }}</small>
         </div>
       </el-table-column>
-      <el-table-column 
-        min-width="180" 
-        label="Color" 
+      <el-table-column
+        min-width="180"
+        label="Color"
         prop="color"/>
-      <el-table-column 
-        min-width="100" 
-        label="Size" 
+      <el-table-column
+        min-width="100"
+        label="Size"
         prop="size"/>
-      <el-table-column 
-        min-width="200" 
-        label="Price" 
+      <el-table-column
+        min-width="200"
+        label="Price"
         header-align="right">
-        <div 
-          slot-scope="{row}" 
+        <div
+          slot-scope="{row}"
           class="td-number">
           <small>€</small>
           {{ row.price }}
         </div>
       </el-table-column>
-      <el-table-column 
-        min-width="200" 
-        label="Quantity" 
+      <el-table-column
+        min-width="200"
+        label="Quantity"
         header-align="right">
-        <div 
-          slot-scope="{row}" 
+        <div
+          slot-scope="{row}"
           class="td-number">
           {{ row.quantity }}
           <div class="btn-group">
-            <n-button 
-              type="info" 
-              size="sm" 
+            <n-button
+              type="info"
+              size="sm"
               @click.native="decreaseQuantity(row)">
               <i class="now-ui-icons ui-1_simple-delete"/>
             </n-button>
-            <n-button 
-              type="info" 
-              size="sm" 
+            <n-button
+              type="info"
+              size="sm"
               @click.native="increaseQuantity(row)">
               <i class="now-ui-icons ui-1_simple-add"/>
             </n-button>
           </div>
         </div>
       </el-table-column>
-      <el-table-column 
-        min-width="200" 
-        label="Amount" 
+      <el-table-column
+        min-width="200"
+        label="Amount"
         header-align="right">
-        <div 
-          slot-scope="{row}" 
+        <div
+          slot-scope="{row}"
           class="td-number">
           <small>€</small>
           {{ row.amount }}
         </div>
       </el-table-column>
-      <el-table-column 
-        min-width="100" 
+      <el-table-column
+        min-width="100"
         label="">
-        <div 
-          slot-scope="{row}" 
+        <div
+          slot-scope="{row}"
           class="td-actions">
           <n-button type="neutral">
             <i class="now-ui-icons ui-1_simple-remove"/>
@@ -98,10 +98,10 @@
         {{ shoppingTotal }}
       </div>
       <div class="text-right">
-        <button 
-          type="button" 
-          rel="tooltip" 
-          class="btn btn-info btn-round " 
+        <button
+          type="button"
+          rel="tooltip"
+          class="btn btn-info btn-round "
           data-original-title=""
           title="">
           Complete Purchase
@@ -111,6 +111,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Table, TableColumn } from 'element-ui'
 
