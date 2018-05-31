@@ -8,101 +8,100 @@
         alt="...">
     </div>
     <div>
-
+      <h5 class="title">Game Title</h5>
       <div class="row">
-        <div class="col-md-12 mb-4">
-          <h5 class="title">Game Title</h5>
+        <div class="col-md-6 mb-4">
           <div slot="content"><i class="fa fa-calendar"/> Tuesday, 7 July 2018</div>
           <div slot="content"><i class="fa fa-clock-o"/> 12:00 - 13:00</div>
+        </div>
+        <div class="col-md-6 mb-4">
           <div slot="content"><i class="fa fa-futbol-o"/> Volleyball</div>
           <div slot="content"><i class="fa fa-map-marker"/> Shivaji Park</div>
         </div>
       </div>
-
-      <card class="card-map">
-        <div
-          id="spotMap"
-          class="map map-big"/>
-      </card>
-
       <div class="row">
-        <div class="col-md-12 mb-4">
-          <h5 class="title">Organizer</h5>
-          <div class="author">
-            <a href="#">
-              <img
-                class="avatar border-gray"
-                src="@/assets/img/mike.jpg"
-                alt="...">
-            </a>
-            Mike Andrew
+        <div class="col-md-6 mb-4">
+
+          <div>
+            <h5 class="title">Organizer</h5>
+            <div class="author">
+              <a href="#">
+                <img
+                  class="avatar border-gray"
+                  src="@/assets/img/mike.jpg"
+                  alt="...">
+              </a>
+              Mike Andrew
+            </div>
+            <p class="description">
+              "Come play at the university park"
+            </p>
           </div>
-          <p class="description">
-            "Come play at the university park"
-          </p>
+
+          <div>
+            <h5 class="title">Attending</h5>
+            <span class="author">
+              <a href="#">
+                <img
+                  class="avatar border-gray"
+                  src="@/assets/img/james.jpg"
+                  alt="...">
+              </a>
+            </span>
+            <span class="author">
+              <a href="#">
+                <img
+                  class="avatar border-gray"
+                  src="@/assets/img/emilyz.jpg"
+                  alt="...">
+              </a>
+            </span>
+          </div>
+
+          <div>
+            <h5 class="title">Still needed</h5>
+            <span class="author">
+              <a href="#">
+                <img
+                  class="avatar border-gray"
+                  src="@/assets/img/default-avatar.png"
+                  alt="...">
+              </a>
+            </span>
+            <span class="author">
+              <a href="#">
+                <img
+                  class="avatar border-gray"
+                  src="@/assets/img/default-avatar.png"
+                  alt="...">
+              </a>
+            </span>
+            <span class="author">
+              <a href="#">
+                <img
+                  class="avatar border-gray"
+                  src="@/assets/img/default-avatar.png"
+                  alt="...">
+              </a>
+            </span>
+          </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+          <card class="card-map">
+            <div
+              id="spotMap"
+              class="map map-big"/>
+          </card>
         </div>
       </div>
-
-      <div class="row">
-        <div class="col-md-12 mb-4">
-          <h5 class="title">Attending</h5>
-          <span class="author">
-            <a href="#">
-              <img
-                class="avatar border-gray"
-                src="@/assets/img/james.jpg"
-                alt="...">
-            </a>
-          </span>
-          <span class="author">
-            <a href="#">
-              <img
-                class="avatar border-gray"
-                src="@/assets/img/emilyz.jpg"
-                alt="...">
-            </a>
-          </span>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 mb-4">
-          <h5 class="title">Still needed</h5>
-          <span class="author">
-            <a href="#">
-              <img
-                class="avatar border-gray"
-                src="@/assets/img/default-avatar.png"
-                alt="...">
-            </a>
-          </span>
-          <span class="author">
-            <a href="#">
-              <img
-                class="avatar border-gray"
-                src="@/assets/img/default-avatar.png"
-                alt="...">
-            </a>
-          </span>
-          <span class="author">
-            <a href="#">
-              <img
-                class="avatar border-gray"
-                src="@/assets/img/default-avatar.png"
-                alt="...">
-            </a>
-          </span>
-        </div>
-      </div>
-
     </div>
 
     <div
       slot="footer"
       class="button-container">
       <div class="row mb-4">
-
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-2">
           <n-button
             type="primary"
             round
@@ -111,7 +110,7 @@
             I will join
           </n-button>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mb-2">
           <n-button
             type="danger"
             round
@@ -121,6 +120,7 @@
           </n-button>
         </div>
       </div>
+
       <div class="row">
         <div class="col-lg-12">
           <h5 class="title">Share</h5>
@@ -181,12 +181,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .card-map {
-  min-height: 50px;
+  min-height: 350px;
   .map {
     width: 100%;
-    height: 25px;
+    height: 300px;
   }
 }
 </style>

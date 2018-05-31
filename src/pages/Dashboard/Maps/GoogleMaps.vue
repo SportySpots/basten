@@ -178,10 +178,10 @@ export default {
 
 <style lang="scss">
 .card-map {
-  min-height: 350px;
+  min-height: 450px;
   .map {
     width: 100%;
-    height: 300px;
+    height: 400px;
   }
 }
 </style>
