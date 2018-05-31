@@ -1,10 +1,10 @@
 <template>
   <div class="row">
     <div class="header text-center">
-      <h3 class="title">Timeline</h3>
+      <h3 class="title">Notifications</h3>
     </div>
     <div class="col-md-12">
-      <time-line>
+      <time-line type="simple">
         <time-line-item
           inverted
           badge-type="danger"
@@ -24,6 +24,7 @@
         </time-line-item>
 
         <time-line-item
+          inverted
           badge-type="success"
           badge-icon="now-ui-icons design-2_ruler-pencil">
           <span
@@ -74,6 +75,7 @@
         </time-line-item>
 
         <time-line-item
+          inverted
           badge-type="warning"
           badge-icon="now-ui-icons ui-1_send">
           <span

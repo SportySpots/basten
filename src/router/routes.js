@@ -18,6 +18,7 @@ import Dashboard from '@pages/Dashboard/Dashboard.vue'
 const User = () => import('@pages/Dashboard/Users/UserProfile.vue')
 const Pricing = () => import('@pages/Dashboard/Pricing.vue')
 const TimeLine = () => import('@pages/Dashboard/TimeLinePage.vue')
+const GameRsvp = () => import('@pages/Dashboard/Games/Rsvp.vue')
 const Login = () => import('@pages/Auth/Login.vue')
 const Register = () => import('@pages/Auth/Register.vue')
 const Lock = () => import('@pages/Auth/Lock.vue')
@@ -187,11 +188,6 @@ let pagesMenu = {
       name: 'User Page',
       components: { default: User, header: DefaultHeader },
     },
-    {
-      path: 'timeline',
-      name: 'Timeline Page',
-      components: { default: TimeLine, header: DefaultHeader },
-    },
   ],
 }
 
@@ -229,12 +225,6 @@ const routes = [
     redirect: '/dashboard',
     name: 'Home',
   },
-  componentsMenu,
-  formsMenu,
-  tablesMenu,
-  mapsMenu,
-  pagesMenu,
-  authPages,
   {
     path: '/',
     component: DashboardLayout,
@@ -247,6 +237,16 @@ const routes = [
         components: { default: Dashboard, header: DefaultHeader },
       },
       {
+        path: 'games',
+        name: 'Games',
+        components: { default: GameRsvp, header: DefaultHeader },
+      },
+      {
+        path: 'notifications',
+        name: 'Notifications',
+        components: { default: TimeLine, header: DefaultHeader },
+      },
+      {
         path: 'widgets',
         name: 'Widgets',
         components: { default: Widgets, header: DefaultHeader },
@@ -254,7 +254,15 @@ const routes = [
     ],
   },
   { path: '*', component: NotFound },
+  componentsMenu,
+  formsMenu,
+  tablesMenu,
+  mapsMenu,
+  pagesMenu,
+  authPages,
 ]
+
+export default routes
 
 // TODO: Merge the above routes in defaultroutes
 // const defaultRoutes = [
@@ -386,5 +394,3 @@ const routes = [
 //     },
 //   })
 // }
-
-export default routes

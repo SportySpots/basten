@@ -9,8 +9,8 @@
         slot="links">
         <user-menu/>
         <sidebar-item :link="{name: 'Dashboard', icon: 'fa fa-dashboard', path: '/dashboard'}"/>
-        <sidebar-item :link="{name: 'Games', icon: 'fa fa-futbol-o', path: '/404'}"/>
-        <sidebar-item :link="{name: 'Notifications', icon: 'fa fa-flash', path: '/404'}"/>
+        <sidebar-item :link="{name: 'Games', icon: 'fa fa-futbol-o', path: '/games'}"/>
+        <sidebar-item :link="{name: 'Notifications', icon: 'fa fa-flash', path: '/notifications'}"/>
 
         <!-- <sidebar-item :link="{name: 'Pages', icon: 'now-ui-icons design_image'}">
           <sidebar-item :link="{name: 'Pricing', path: '/pricing'}"/>

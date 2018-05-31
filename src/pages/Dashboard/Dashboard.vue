@@ -9,12 +9,12 @@
                 <div class="statistics">
                   <div class="info">
                     <div class="icon icon-primary">
-                      <i class="now-ui-icons ui-2_chat-round"/>
+                      <i class="now-ui-icons sport_user-run"/>
                     </div>
                     <h3 class="info-title">
-                      <animated-number :value="853"/>
+                      <animated-number :value="24"/>
                     </h3>
-                    <h6 class="stats-title">Messages</h6>
+                    <h6 class="stats-title">Attending Games</h6>
                   </div>
                 </div>
               </div>
@@ -22,13 +22,12 @@
                 <div class="statistics">
                   <div class="info">
                     <div class="icon icon-success">
-                      <i class="now-ui-icons business_money-coins"/>
+                      <i class="now-ui-icons ui-1_calendar-60"/>
                     </div>
                     <h3 class="info-title">
-                      <small>$</small>
-                      <animated-number :value="3521"/>
+                      <animated-number :value="4"/>
                     </h3>
-                    <h6 class="stats-title">Today Revenue</h6>
+                    <h6 class="stats-title">Pending Invites</h6>
                   </div>
                 </div>
               </div>
@@ -36,12 +35,12 @@
                 <div class="statistics">
                   <div class="info">
                     <div class="icon icon-info">
-                      <i class="now-ui-icons users_single-02"/>
+                      <i class="now-ui-icons sport_trophy"/>
                     </div>
                     <h3 class="info-title">
-                      <animated-number :value="562"/>
+                      <animated-number :value="56"/>
                     </h3>
-                    <h6 class="stats-title">Customers</h6>
+                    <h6 class="stats-title">Games Participated</h6>
                   </div>
                 </div>
               </div>
@@ -49,12 +48,12 @@
                 <div class="statistics">
                   <div class="info">
                     <div class="icon icon-danger">
-                      <i class="now-ui-icons objects_support-17"/>
+                      <i class="now-ui-icons education_agenda-bookmark"/>
                     </div>
                     <h3 class="info-title">
-                      <animated-number :value="353"/>
+                      <animated-number :value="3"/>
                     </h3>
-                    <h6 class="stats-title">Support Requests</h6>
+                    <h6 class="stats-title">Games Organized</h6>
                   </div>
                 </div>
               </div>
@@ -66,207 +65,28 @@
     </div>
 
     <div class="row">
-      <div class="col-lg-4">
-        <card
-          class="card-chart"
-          no-footer-line>
-          <div slot="header">
-            <h5 class="card-category">Active Users</h5>
-            <h2 class="card-title">
-              <animated-number :value="34252"/>
-            </h2>
-            <drop-down
-              :hide-arrow="true"
-              position="right">
-              <n-button
-                slot="title"
-                class="dropdown-toggle no-caret"
-                round
-                simple
-                icon>
-                <i class="now-ui-icons loader_gear"/>
-              </n-button>
-
-              <a
-                class="dropdown-item"
-                href="#">Action</a>
-              <a
-                class="dropdown-item"
-                href="#">Another action</a>
-              <a
-                class="dropdown-item"
-                href="#">Something else here</a>
-              <a
-                class="dropdown-item text-danger"
-                href="#">Remove Data</a>
-            </drop-down>
-
-          </div>
-          <div class="chart-area">
-            <line-chart
-              :labels="charts.activeUsers.labels"
-              :data="charts.activeUsers.data"
-              :color="charts.activeUsers.color"
-              :height="200"/>
-          </div>
-          <div class="table-responsive">
-            <n-table :data="tableData">
-              <template slot-scope="{row}">
-                <td>
-                  <div class="flag">
-                    <img :src="row.flag">
-                  </div>
-                </td>
-                <td>{{ row.country }}</td>
-                <td class="text-right">
-                  {{ row.value }}
-                </td>
-                <td class="text-right">
-                  {{ row.percentage }}
-                </td>
-              </template>
-            </n-table>
-          </div>
-          <div
-            slot="footer"
-            class="stats">
-            <i class="now-ui-icons arrows-1_refresh-69"/> Just Updated
-          </div>
-        </card>
-      </div>
-
-      <div class="col-lg-4">
-        <card
-          class="card-chart"
-          no-footer-line>
-          <div slot="header">
-            <h5 class="card-category">Summer Email Campaign</h5>
-            <h2 class="card-title">
-              <animated-number :value="55300"/>
-            </h2>
-            <drop-down position="right">
-              <n-button
-                slot="title"
-                class="dropdown-toggle no-caret"
-                round
-                simple
-                icon>
-                <i class="now-ui-icons loader_gear"/>
-              </n-button>
-
-              <a
-                class="dropdown-item"
-                href="#">Action</a>
-              <a
-                class="dropdown-item"
-                href="#">Another action</a>
-              <a
-                class="dropdown-item"
-                href="#">Something else here</a>
-              <a
-                class="dropdown-item text-danger"
-                href="#">Remove Data</a>
-            </drop-down>
-
-          </div>
-          <div class="chart-area">
-            <line-chart
-              :labels="charts.emailsCampaign.labels"
-              :data="charts.emailsCampaign.data"
-              :color="charts.emailsCampaign.color"
-              :height="200"/>
-          </div>
-          <div class="card-progress">
-            <n-progress
-              :value="90"
-              label="Delivery Rate"
-              show-value/>
-            <n-progress
-              :value="60"
-              type="success"
-              label="Open Rate"
-              show-value/>
-            <n-progress
-              :value="12"
-              type="info"
-              label="Click Rate"
-              show-value/>
-            <n-progress
-              :value="5"
-              type="warning"
-              label="Hard Bounce"
-              show-value/>
-            <n-progress
-              :value="0.11"
-              type="danger"
-              label="Spam Report"
-              show-value/>
-          </div>
-          <div
-            slot="footer"
-            class="stats">
-            <i class="now-ui-icons arrows-1_refresh-69"/> Just Updated
-          </div>
-        </card>
-      </div>
-
-      <div class="col-lg-4">
-        <card
-          class="card-chart"
-          no-footer-line>
-          <div slot="header">
-            <h5 class="card-category">Active Countries</h5>
-            <h2 class="card-title">
-              <animated-number :value="105"/>
-            </h2>
-          </div>
-          <div class="chart-area">
-            <line-chart
-              :labels="charts.activeCountries.labels"
-              :data="charts.activeCountries.data"
-              :color="charts.activeCountries.color"
-              :height="200"/>
-          </div>
-
-          <async-world-map
-            :data="mapData"
-            class="map"/>
-
-          <div
-            slot="footer"
-            class="stats">
-            <i class="now-ui-icons arrows-1_refresh-69"/> Just Updated
-          </div>
-        </card>
-      </div>
-
-    </div>
-    <div class="row">
       <div class="col-md-12">
         <card>
           <h4
             slot="header"
-            class="card-title">Best Selling Products</h4>
+            class="card-title">Upcoming Games</h4>
           <div class="table-responsive">
             <n-table
-              :data="productsTable"
+              :data="gamesTable"
               class="table-shopping">
+
               <template slot="columns">
                 <th class="text-center"/>
-                <th>Product</th>
-                <th>Color</th>
-                <th>Size</th>
+                <th>Game</th>
+                <th>Sport</th>
+                <th>Players Needed</th>
                 <th class="text-right">
-                  Price
-                </th>
-                <th class="text-right">
-                  Qty
-                </th>
-                <th class="text-right">
-                  Amount
+                  Participate
                 </th>
               </template>
+
               <template slot-scope="{row}">
+
                 <td>
                   <div class="img-container">
                     <img
@@ -274,37 +94,30 @@
                       alt="...">
                   </div>
                 </td>
+
                 <td class="td-name">
                   <a href="#jacket">{{ row.title }}</a>
                   <br>
                   <small>{{ row.subTitle }}</small>
                 </td>
-                <td>{{ row.color }}</td>
-                <td>{{ row.size }}</td>
-                <td class="td-number">
-                  <small>€</small>
-                  {{ row.price }}
-                </td>
-                <td class="td-number">
-                  {{ row.quantity }}
-                </td>
-                <td class="td-number">
-                  <small>€</small>
-                  {{ row.amount }}
-                </td>
-              </template>
-              <template slot="summary-row">
-                <td colspan="5"/>
-                <td class="td-total">
-                  Total
-                </td>
-                <td class="td-price">
-                  <small>€</small>
-                  2,346
+
+                <td>{{ row.sport }}</td>
+
+                <td>{{ row.playersNeeded }}</td>
+
+                <td>
+                  <n-button
+                    type="primary"
+                    round
+                    icon>
+                    <i class="now-ui-icons ui-2_favourite-28"/>
+                  </n-button>
                 </td>
               </template>
+
             </n-table>
           </div>
+
         </card>
       </div>
     </div>
@@ -313,155 +126,41 @@
 </template>
 
 <script>
-import {
-  StatsCard,
-  Card,
-  Table as NTable,
-  Checkbox,
-  AnimatedNumber,
-  Progress as NProgress,
-  LineChart,
-  AsyncWorldMap,
-} from '@components'
+import { StatsCard, Card, Table as NTable, AnimatedNumber } from '@components'
 
 export default {
   components: {
-    Checkbox,
     Card,
     NTable,
     StatsCard,
     AnimatedNumber,
-    LineChart,
-    NProgress,
-    AsyncWorldMap,
   },
   data() {
     return {
       progress: 0,
-      charts: {
-        activeUsers: {
-          labels: [
-            'Jan',
-            'Feb',
-            'Mar',
-            'Apr',
-            'May',
-            'Jun',
-            'Jul',
-            'Aug',
-            'Sep',
-            'Oct',
-            'Nov',
-            'Dec',
-          ],
-          data: [542, 480, 430, 550, 530, 453, 380, 434, 568, 610, 700, 630],
-          color: '#f96332',
-        },
-        emailsCampaign: {
-          labels: ['12pm,', '3pm', '6pm', '9pm', '12am', '3am', '6am', '9am'],
-          data: [40, 500, 650, 700, 1200, 1250, 1300, 1900],
-          color: '#18ce0f',
-        },
-        activeCountries: {
-          labels: [
-            'January',
-            'February',
-            'March',
-            'April',
-            'May',
-            'June',
-            'July',
-            'August',
-            'September',
-            'October',
-          ],
-          data: [80, 78, 86, 96, 83, 85, 76, 75, 88, 90],
-          color: '#2CA8FF',
-        },
-      },
-      tableData: [
-        {
-          flag: require('@/assets/img/US.png'),
-          country: 'USA',
-          value: '2.920',
-          percentage: '53.23%',
-        },
-        {
-          flag: require('@/assets/img/DE.png'),
-          country: 'Germany',
-          value: '1.300',
-          percentage: '20.43%',
-        },
-        {
-          flag: require('@/assets/img/AU.png'),
-          country: 'Australia',
-          value: '760',
-          percentage: '10.35%',
-        },
-        {
-          flag: require('@/assets/img/GB.png'),
-          country: 'United Kingdom',
-          value: '690',
-          percentage: '7.87%',
-        },
-        {
-          flag: require('@/assets/img/RO.png'),
-          country: 'United Kingdom',
-          value: '600',
-          percentage: '5.94%',
-        },
-        {
-          flag: require('@/assets/img/BR.png'),
-          country: 'Brasil',
-          value: '550',
-          percentage: '4.34%',
-        },
-      ],
-      productsTable: [
+      gamesTable: [
         {
           image: require('@/assets/img/saint-laurent.jpg'),
-          title: 'Suede Biker Jacket',
+          title: 'Football at the park',
           subTitle: 'by Saint Laurent',
-          color: 'Black',
-          size: 'M',
-          price: 3390,
-          quantity: 1,
-          amount: 3390,
+          sport: 'Football',
+          playersNeeded: 3390,
         },
         {
-          image: require('@/assets/img/balmain.jpg'),
-          title: 'Jersey T-Shirt ',
-          subTitle: 'by Balmain',
-          color: 'Black',
-          size: 'M',
-          price: 499,
-          quantity: 2,
-          amount: 998,
+          image: require('@/assets/img/saint-laurent.jpg'),
+          title: 'Football at the park',
+          subTitle: 'by Saint Laurent',
+          sport: 'Cricket',
+          playersNeeded: 3390,
         },
         {
-          image: require('@/assets/img/prada.jpg'),
-          title: 'Slim-Fit Swim Short ',
-          subTitle: 'by Prada',
-          color: 'Red',
-          size: 'M',
-          price: 200,
-          quantity: 1,
-          amount: 200,
+          image: require('@/assets/img/saint-laurent.jpg'),
+          title: 'Football at the park',
+          subTitle: 'by Saint Laurent',
+          sport: 'Yoga',
+          playersNeeded: 3390,
         },
       ],
-      mapData: {
-        AU: 760,
-        BR: 550,
-        CA: 120,
-        DE: 1300,
-        FR: 540,
-        GB: 690,
-        GE: 200,
-        IN: 200,
-        RO: 600,
-        RU: 300,
-        US: 2920,
-      },
     }
   },
 }
