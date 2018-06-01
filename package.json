@@ -15,7 +15,9 @@
     "test": "yarn unit && yarn e2e",
     "test:ci": "yarn lint && yarn unit --coverage --ci && yarn e2e",
     "new": "hygen new",
-    "docs": "vuepress dev"
+    "docs": "vuepress dev",
+    "graphql:updateSchemaJSON":
+      "get-graphql-schema https://training.sportyspots.com/graphql > schema.graphql.json --json"
   },
   "gitHooks": {
     "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
@@ -26,9 +28,11 @@
   },
   "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
   "dependencies": {
-    "@fortawesome/fontawesome-free-solid": "5.0.13",
     "@fortawesome/fontawesome": "1.1.8",
+    "@fortawesome/fontawesome-free-solid": "5.0.13",
     "@fortawesome/vue-fontawesome": "0.0.22",
+    "apollo-link": "^1.2.2",
+    "apollo-link-http": "^1.5.4",
     "axios": "0.18.0",
     "bootstrap": "^4.0.0",
     "chart.js": "^2.7.1",
@@ -37,6 +41,8 @@
     "fullcalendar": "^3.9.0",
     "fuse.js": "^3.2.0",
     "google-maps": "^3.2.1",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
     "jquery": "^3.2.1",
     "jvectormap-next": "^3.0.0",
     "lodash": "4.17.10",
@@ -46,11 +52,11 @@
     "sweetalert2": "^7.0.0",
     "tween.js": "^16.6.0",
     "vee-validate": "^2.0.5",
+    "vue": "2.5.16",
     "vue-chartjs": "^3.1.0",
     "vue-clickaway": "^2.1.0",
     "vue-meta": "1.5.0",
     "vue-router": "3.0.1",
-    "vue": "2.5.16",
     "vue2-google-maps": "^0.8.4",
     "vue2-transitions": "^0.2.2",
     "vuejs-datepicker": "^0.9.25",

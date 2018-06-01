@@ -1,4 +1,4 @@
-// import store from '@state/store';
+import store from '@state/store';
 import DashboardLayout from '@pages/Dashboard/Layout.vue'
 import AuthLayout from '@pages/Auth/Layout.vue'
 import Widgets from '@pages/Dashboard/Widgets.vue'
@@ -15,6 +15,7 @@ import Dashboard from '@pages/Dashboard/Dashboard.vue'
 // Pages
 const TimeLine = () => import('@pages/Dashboard/TimeLinePage.vue')
 const GameRsvp = () => import('@pages/Dashboard/Games/Rsvp.vue')
+const Game = () => import('@pages/Dashboard/Games/Game.vue')
 const Login = () => import('@pages/Auth/Login.vue')
 const Register = () => import('@pages/Auth/Register.vue')
 
@@ -57,6 +58,26 @@ const routes = [
         path: 'games',
         name: 'Games',
         components: { default: GameRsvp, header: DefaultHeader },
+      },
+      {
+        path: 'games/:uuid',
+        name: 'game',
+        component: { default: Game, header: DefaultHeader},
+        meta: {
+          authRequired: false,
+        },
+        beforeEnter(routeTo, routeFrom, next) {
+          console.log('bla')
+          store
+            .dispatch('games/fetchGame', {uuid: routeTo.params.uuid})
+            .then(game => {
+              routeTo.params.game = game
+              next()
+            })
+            .catch(() => {
+              next({name: '404', params: {resource: 'Game'}})
+            })
+        },
       },
       {
         path: 'notifications',
