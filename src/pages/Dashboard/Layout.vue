@@ -1,9 +1,9 @@
 <template>
   <div
-    :class="{'nav-open': $sidebar.showSidebar}"
+    :class="{'nav-open': $sidebar.showSidebar && loggedIn}"
     class="wrapper">
     <notifications/>
-    <side-bar>
+    <side-bar v-if="loggedIn">
       <template
         slot-scope="props"
         slot="links">
@@ -105,6 +105,9 @@ export default {
     UserMenu,
     SlideYDownTransition,
     ZoomCenterTransition,
+  },
+  computed: {
+    loggedIn() { return this.$store.getters['auth/loggedIn'] }
   },
   mounted() {
     let docClasses = document.body.classList

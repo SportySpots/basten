@@ -2,7 +2,7 @@
   <div class="user">
     <div class="photo">
       <img
-        src="@/assets/img/james.jpg"
+        src="@/assets/img/default-avatar.png"
         alt="avatar">
     </div>
     <div class="info">
@@ -12,7 +12,7 @@
         href="#"
         @click.stop="toggleMenu">
         <span>
-          {{ title }}
+          {{ user.first_name }} {{ user.last_name }}
           <b class="caret"/>
         </span>
       </a>
@@ -24,21 +24,14 @@
             class="nav">
             <slot>
               <li>
-                <a href="#vue">
-                  <span class="sidebar-mini-icon">MP</span>
-                  <span class="sidebar-normal">My Profile</span>
-                </a>
-              </li>
-              <li>
-                <a href="#vue">
-                  <span class="sidebar-mini-icon">S</span>
-                  <span class="sidebar-normal">Settings</span>
-                </a>
-              </li>
-              <li>
-                <a href="#vue">
+                <a
+                  href="#vue"
+                  @click.prevent="logOut"
+                >
                   <span class="sidebar-mini-icon">L</span>
-                  <span class="sidebar-normal">Logout</span>
+                  <span
+                    class="sidebar-normal"
+                  >Logout</span>
                 </a>
               </li>
             </slot>
@@ -51,6 +44,7 @@
 
 <script>
 import { CollapseTransition } from 'vue2-transitions'
+import router from '../../../router'
 
 export default {
   components: {
@@ -67,7 +61,15 @@ export default {
       isClosed: true,
     }
   },
+  computed: {
+    user() { return this.$store.state.auth.currentUser.user },
+  },
   methods: {
+    async logOut() {
+      console.log('logout')
+      await this.$store.dispatch('auth/logOut')
+      router.replace('/login')
+    },
     toggleMenu() {
       this.isClosed = !this.isClosed
     },

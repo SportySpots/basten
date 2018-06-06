@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { seedorfRESTUrl } from '../../app.config'
 
 export const state = {
   currentUser: getSavedState('auth.currentUser'),
@@ -28,14 +29,17 @@ export const actions = {
   },
 
   // Logs in the current user.
-  logIn({ commit, dispatch, getters }, { username, password } = {}) {
+  async logIn({ commit, dispatch, getters }, { username, password } = {}) {
     if (getters.loggedIn) return dispatch('validate')
-
-    return axios.post('/api/session', { username, password }).then(response => {
+    try {
+      const response = await axios.post(`${seedorfRESTUrl}/auth/login/`, { username, password, email: username })
       const user = response.data
       commit('SET_CURRENT_USER', user)
       return user
-    })
+    } catch(e) {
+      if (e.response && e.response.data) { throw new Error(e.response.data[Object.keys(e.response.data)[0]]) }
+      else throw new Error("Unknown error logging in")
+    }
   },
 
   // Logs out the current user.
@@ -45,22 +49,18 @@ export const actions = {
 
   // Validates the current user's token and refreshes it
   // with new data from the API.
-  validate({ commit, state }) {
-    if (!state.currentUser) return Promise.resolve(null)
+  async validate({ commit, state }) {
+    if (!state.currentUser) return null
 
-    return axios
-      .get('/api/session')
-      .then(response => {
-        const user = response.data
-        commit('SET_CURRENT_USER', user)
-        return user
-      })
-      .catch(error => {
-        if (error.response.status === 401) {
-          commit('SET_CURRENT_USER', null)
-        }
-        return null
-      })
+    try {
+      const response = await axios.post(`${seedorfRESTUrl}/auth/token-verify/`, {token: state.currentUser.token})
+      const user = response.data
+      // commit('SET_CURRENT_USER', user)
+      return user
+    } catch(e) {
+      console.log(e)
+      commit('SET_CURRENT_USER', null)
+    }
   },
 }
 

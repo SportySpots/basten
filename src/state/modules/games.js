@@ -1,51 +1,29 @@
-import {execute, makePromise} from 'apollo-link';
-import {HttpLink} from 'apollo-link-http';
-import gql from 'graphql-tag';
+import {query} from '../../graphql';
+import {GAME_DETAILS} from '../../queries';
 
-const uri = 'https://training.sportyspots.com/graphql';
-const link = new HttpLink({
-    uri,
-    headers: {},
-    fetchOptions: {
-      // mode: 'no-cors',
-    }
-  }
-);
-
-export const state = {
-  games: [],
-}
+export const state = []
 
 export const getters = {}
 
 export const mutations = {
   CACHE_GAME(state, game) {
-    state.push(game)
+    const oldGameIndex = state.findIndex(g => g.uuid === game.uuid);
+    if (oldGameIndex !== -1) {
+      state.$set(oldGameIndex, game);
+    } else {
+      state.push(game)
+    }
   },
 }
 
 export const actions = {
-  fetchGame({commit, state, rootState}, {uuid}) {
-    const operation = {
-      query: gql`query game($uuid: UUID) {
-          game(uuid: $uuid) {
-              uuid
-              description
-              spot {
-                  name
-              }
-          }
-      }`,
-      variables: {uuid},
-      // operationName: { },
-      context: {},
-      extensions: {}
-    };
-
-    makePromise(execute(link, operation))
-      .then(data => console.log(`received data ${JSON.stringify(data, null, 2)}`))
-      .catch(error => console.log(`received error ${error}`))
-
+  async fetchGame({commit, state, rootState}, {uuid}) {
+    const result = await query(GAME_DETAILS, { uuid })
+    if ('errors' in result && result.errors.length > 0) {
+      throw new Error(result.errors[0])
+    }
+    commit('CACHE_GAME', result.data.game)
+    return result.data.game
 
     // // 1. Check if we already have the user as a current user.
     // const { currentUser } = rootState.auth

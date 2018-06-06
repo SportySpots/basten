@@ -1,0 +1,1 @@
+export { GAME_DETAILS } from './GAME_DETAILS'

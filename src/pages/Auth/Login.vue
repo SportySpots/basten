@@ -1,6 +1,6 @@
 <template>
   <div class="col-md-4 ml-auto mr-auto">
-    <form @submit.prevent>
+    <form @submit.prevent="login">
       <card class="card-login text-center">
 
         <div slot="header">
@@ -14,19 +14,36 @@
 
         <div>
           <fg-input
+            v-validate="modelValidations.email"
+            v-model="model.email"
+            :error="getError('email')"
+            name="email"
             placeholder="Email..."
             addon-left-icon="now-ui-icons ui-1_email-85"/>
 
           <fg-input
+            v-model="model.password"
+            name="password"
+            type="password"
             placeholder="Password..."
-            addon-left-icon="now-ui-icons objects_key-25"/>
+            addon-left-icon="now-ui-icons objects_key-25"
+            @keyup.13="login"
+          />
+          <span
+            v-if="loginError"
+            class="login-error"
+          >
+            {{ loginError }}
+          </span>
         </div>
 
         <div slot="footer">
           <n-button
             type="primary"
             round
-            block>
+            block
+            @click.native="login"
+          >
             Get Started
           </n-button>
           <div class="pull-left">
@@ -42,29 +59,54 @@
             </a>
           </div>
         </div>
-
       </card>
     </form>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
+  import router from '../../router'
+
+  export default {
+    data: () => ({
+      loginError: "",
       model: {
         email: '',
         password: '',
-        subscribe: true,
       },
-    }
-  },
-}
+      modelValidations: {
+        email: {
+          email: true,
+        }
+      },
+    }),
+    methods: {
+      getError(fieldName) {
+        return this.errors.first(fieldName)
+      },
+      async login() {
+        if (await this.$validator.validateAll()) {
+          try {
+            await this.$store.dispatch('auth/logIn', {
+              email: this.model.email, username: this.model.email, password: this.model.password
+            })
+            router.replace('/dashboard')
+            this.loginError = null
+          } catch(e) {
+            this.loginError = ""+e.toString()
+          }
+        }
+      }
+    },
+  }
 </script>
 
 <style>
-.navbar-nav .nav-item p {
-  margin-left: 5px;
-  line-height: inherit;
-}
+  .navbar-nav .nav-item p {
+    margin-left: 5px;
+    line-height: inherit;
+  }
+  span.login-error {
+    color: red;
+  }
 </style>

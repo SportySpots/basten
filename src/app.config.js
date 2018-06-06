@@ -5,4 +5,6 @@
 module.exports = {
   title: 'SportySpots',
   description: 'Play sports, anywhere, anytime with anyone',
+  seedorfGraphQLUrl: 'https://training.sportyspots.com/graphql',
+  seedorfRESTUrl: 'https://training.sportyspots.com/api',
 }
