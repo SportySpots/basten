@@ -3,9 +3,9 @@ version: '3'
 services:
   vue:
     build:
-      context: ../admin
+      context: .
     volumes:
-      - static_vue:/build
+      - vue_dist:/build
     command: sh -c "rm -rf /build/* && cp -r /app/dist/* /build"
 
   express:
@@ -13,6 +13,8 @@ services:
       context: ./express
     env_file:
       - .env
+    volumes:
+      - vue_dist:/vue_dist:ro
     restart: unless-stopped
 
   nginx:
@@ -20,8 +22,9 @@ services:
       context: ./nginx
     volumes:
       - ./cert:/cert
+      - ./arena:/arena
       - acme:/acme
-      - static_vue:/static_vue:ro
+      - vue_dist:/vue_dist:ro
     depends_on:
       - vue
       - express
@@ -47,4 +50,5 @@ services:
       - nginx
 
 volumes:
-  vue_static:
+  vue_dist:
+  acme:

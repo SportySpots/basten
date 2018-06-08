@@ -4,10 +4,11 @@ RUN mkdir /app
 
 WORKDIR /app
 
-COPY yarn.lock ../.env package.json /app/
+COPY yarn.lock package.json /app/
 
 RUN yarn
 
 COPY index.js /app/
+COPY src /app/src
 
-CMD yarn start
+CMD node index.js

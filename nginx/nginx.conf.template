@@ -12,8 +12,23 @@ server {
     ssl_certificate /cert/fullchain.pem;
     ssl_certificate_key /cert/privkey.pem;
 
-    location /static {
-        alias /static_frontend;
+    root /;
+
+    location =/ {
+        rewrite ^/$ /about/ permanent;
+    }
+
+    location =/privacy.html {
+        rewrite ^/privacy\.html$ /about/privacy.html permanent;
+    }
+
+    location =/terms.html {
+        rewrite ^/terms\.html$ /about/terms.html permanent;
+    }
+
+    location /about {
+        alias /arena;
+        try_files $uri $uri/ /index.html =404;
     }
 
     # forward games to express
@@ -22,8 +37,7 @@ server {
     }
 
     location / {
-        alias /static_vue;
-        try_files $uri /static_vue/index.html;
+        try_files /vue_dist/$uri /vue_dist/$uri/ /vue_dist/index.html =404;
         #proxy_cache app_cache;
         #add_header X-Proxy-Cache $upstream_cache_status;
         #proxy_cache_valid 200 30m;
