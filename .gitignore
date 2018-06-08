@@ -4,6 +4,7 @@ Thumbs.db
 
 # Dependencies
 node_modules/
+express/node_modules
 
 # Dev/Build Artifacts
 /dist/

@@ -1,0 +1,50 @@
+version: '3'
+
+services:
+  vue:
+    build:
+      context: ../admin
+    volumes:
+      - static_vue:/build
+    command: sh -c "rm -rf /build/* && cp -r /app/dist/* /build"
+
+  express:
+    build:
+      context: ./express
+    env_file:
+      - .env
+    restart: unless-stopped
+
+  nginx:
+    build:
+      context: ./nginx
+    volumes:
+      - ./cert:/cert
+      - acme:/acme
+      - static_vue:/static_vue:ro
+    depends_on:
+      - vue
+      - express
+    env_file:
+      - .env
+    ports:
+      - 443:443
+      - 80:80
+    restart: unless-stopped
+
+  certbot:
+    image: "certbot/certbot"
+    volumes:
+      - ./cert:/cert
+      - ./nginx/certbot.sh:/certbot.sh
+      - ./letsencrypt:/etc/letsencrypt
+      - acme:/acme
+    command: sh /certbot.sh
+    entrypoint: ""
+    env_file:
+      - .env
+    depends_on:
+      - nginx
+
+volumes:
+  vue_static:

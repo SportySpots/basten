@@ -1,6 +1,8 @@
 <script>
 import appConfig from '@src/app.config'
 
+console.log(process.env);
+
 export default {
   page: {
     // All subcomponent titles will be injected into this template.
