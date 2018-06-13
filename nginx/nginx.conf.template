@@ -32,9 +32,9 @@ server {
     }
 
     # forward games to express
-    #location /games {
-    #    proxy_pass http://express:3000;
-    #}
+    location /games {
+        proxy_pass http://express:3000;
+    }
 
     location /apple-app-site-association {
         proxy_pass http://express:3000;

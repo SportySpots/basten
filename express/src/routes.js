@@ -20,7 +20,8 @@ const appleAppSiteAssociationObject = {
   }
 }
 
-fs.readFile('/vue_dist/index.html', 'utf-8', (err, data) => {
+// fs.readFile('/vue_dist/index.html', 'utf-8', (err, data) => {
+fs.readFile('./src/game.html', 'utf-8', (err, data) => {
   if (err) {
     throw new Error(err)
   }
