@@ -32,7 +32,11 @@ fs.readFile('/vue_dist/index.html', 'utf-8', (err, data) => {
       const html = data.replace(placeholder, result)
       res.send(html)
       console.log(game)
-    }).catch(e => { console.log(e.result.errors) })
+    }).catch(e => {
+      if (e.result && e.result.errors) {
+        console.log(e.result.errors)
+      } else console.log(e)
+    })
   })
   app.get(/apple-app-site-association\/?/, (req, res) => {
     res.set({

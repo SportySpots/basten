@@ -36,6 +36,14 @@ server {
         proxy_pass http://express:3000;
     }
 
+    location /android {
+        return 301 https://play.google.com/store/apps/details?id=com.sportyspots.android;
+    }
+
+    location /ios {
+        return 301 https://itunes.apple.com/nl/app/sportyspots/id1391625376;
+    }
+
     location /apple-app-site-association {
         proxy_pass http://express:3000;
     }
