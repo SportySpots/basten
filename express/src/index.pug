@@ -1,6 +1,5 @@
 //- meta tags for the vue_app index.html
 meta(property="og:title" content=game.name)
-if game.images
-    meta(property="og:image" content=game.images[0].image)
+meta(property="og:image" content='https://api.sportyspots.com/static/images/sportyspots-logo-email.png')
 meta(property="og:url" content='https://www.sportyspots.com/games/' + game.uuid)
 meta(property="og:description" content=game.description +  ' @ ' + game.start_time)
