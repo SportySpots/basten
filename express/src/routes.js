@@ -39,6 +39,7 @@ fs.readFile('./src/game.html', 'utf-8', (err, htmlTemplate) => {
     }).catch(e => {
       if (e.result && e.result.errors) {
         console.log(e.result.errors)
+        res.send(htmlTemplate)
       } else console.log(e)
     })
   })
