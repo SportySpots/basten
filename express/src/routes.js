@@ -4,6 +4,7 @@ const pug = require('pug')
 const fs = require('fs')
 const { query, GAME_DETAILS } = require('./graphql.js')
 const moment = require('moment')
+require('moment-timezone')
 
 moment.locale('nl')
 
