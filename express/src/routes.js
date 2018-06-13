@@ -21,7 +21,7 @@ const appleAppSiteAssociationObject = {
 }
 
 // fs.readFile('/vue_dist/index.html', 'utf-8', (err, data) => {
-fs.readFile('./src/game.html', 'utf-8', (err, data) => {
+fs.readFile('./src/game.html', 'utf-8', (err, htmlTemplate) => {
   if (err) {
     throw new Error(err)
   }
@@ -29,10 +29,13 @@ fs.readFile('./src/game.html', 'utf-8', (err, data) => {
     const uuid = req.params.uuid
     query(GAME_DETAILS, { uuid }).then(graphqlResult => {
       const game = graphqlResult.data.game
-      const result = render({game});
-      const html = data.replace(placeholder, result)
-      res.send(html)
-      console.log(game)
+      if (game) {
+        const result = render({game});
+        const html = htmlTemplate.replace(placeholder, result)
+        res.send(html)
+      } else {
+        res.send(htmlTemplate)
+      }
     }).catch(e => {
       if (e.result && e.result.errors) {
         console.log(e.result.errors)
