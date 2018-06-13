@@ -7,6 +7,8 @@ const moment = require('moment')
 
 moment.locale('nl')
 
+app.locals.moment = moment
+
 const placeholder = '<meta name=placeholder>'
 
 const render = pug.compileFile('./src/index.pug');
