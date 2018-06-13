@@ -8,6 +8,18 @@ const placeholder = '<meta name=placeholder>'
 
 const render = pug.compileFile('./src/index.pug');
 
+const appleAppSiteAssociationObject = {
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "FD94WWSEG4.com.sportyspots.ios",
+        "paths": [ "/games/*" ]
+      }
+    ]
+  }
+}
+
 fs.readFile('/vue_dist/index.html', 'utf-8', (err, data) => {
   if (err) {
     throw new Error(err)
@@ -21,6 +33,13 @@ fs.readFile('/vue_dist/index.html', 'utf-8', (err, data) => {
       res.send(html)
       console.log(game)
     }).catch(e => { console.log(e.result.errors) })
+  })
+  app.get(/apple-app-site-association\/?/, (req, res) => {
+    res.set({
+      'Content-Disposition': 'attachment; filename="apple-app-site-association"',
+      'Content-Type': 'application/json',
+    })
+    res.send(appleAppSiteAssociationObject)
   })
   app.listen(3000, () => console.log('Example app listening on port 3000!'))
 })
