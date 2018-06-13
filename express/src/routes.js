@@ -3,6 +3,9 @@ const app = express()
 const pug = require('pug')
 const fs = require('fs')
 const { query, GAME_DETAILS } = require('./graphql.js')
+const moment = require('moment')
+
+moment.locale('nl')
 
 const placeholder = '<meta name=placeholder>'
 

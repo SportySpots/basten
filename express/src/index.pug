@@ -2,4 +2,4 @@
 meta(property="og:title" content=game.name)
 meta(property="og:image" content='https://www.sportyspots.com/about/assets/sportyspots-logo-square.png')
 meta(property="og:url" content='https://www.sportyspots.com/games/' + game.uuid)
-meta(property="og:description" content=game.description +  ' @ ' + game.start_time)
+meta(property="og:description" content=game.description +  ' @ ' + moment(game.start_time).format('dddd D MMMM [om] HH:mm'))
