@@ -14,7 +14,7 @@ services:
     env_file:
       - .env
     volumes:
-      - vue_dist:/vue_dist:ro
+      - ./dist:/vue_dist:ro
     restart: unless-stopped
 
   nginx:
@@ -26,7 +26,6 @@ services:
       - acme:/acme
       - ./dist:/vue_dist:ro
     depends_on:
-      - vue
       - express
     env_file:
       - .env
