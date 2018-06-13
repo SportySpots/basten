@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  vue:
-    build:
-      context: .
-    volumes:
-      - vue_dist:/build
-    command: sh -c "rm -rf /build/* && cp -r /app/dist/* /build"
+#  vue:
+#    build:
+#      context: .
+#    volumes:
+#      - vue_dist:/build
+#    command: sh -c "rm -rf /build/* && cp -r /app/dist/* /build"
 
   express:
     build:
@@ -24,7 +24,7 @@ services:
       - ./cert:/cert
       - ./arena:/arena
       - acme:/acme
-      - vue_dist:/vue_dist:ro
+      - ./dist:/vue_dist:ro
     depends_on:
       - vue
       - express
