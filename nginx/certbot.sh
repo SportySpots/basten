@@ -6,7 +6,7 @@ done
 
 renew () {
     echo "Renewing certificate..."
-    ( set -x; certbot renew --renew-hook  "cp -r /etc/letsencrypt/live/${DOMAIN}/*.pem /cert")
+    ( set -x; certbot renew --renew-hook  "cp -r /etc/letsencrypt/live/www.${DOMAIN}/*.pem /cert")
     if [ $? -ne 0 ]; then
         echo "WARNING: Certbot failed to renew certificate"
     fi
