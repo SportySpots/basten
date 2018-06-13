@@ -16,6 +16,7 @@
     "graphql": "^14.0.0-rc.1",
     "graphql-tag": "^2.9.2",
     "moment": "^2.22.2",
+    "moment-timezone": "^0.5.17",
     "node-fetch": "^2.1.2",
     "pug": "^2.0.3"
   }
