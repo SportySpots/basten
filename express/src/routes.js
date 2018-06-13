@@ -35,6 +35,7 @@ fs.readFile('./src/game.html', 'utf-8', (err, htmlTemplate) => {
     query(GAME_DETAILS, { uuid }).then(graphqlResult => {
       const game = graphqlResult.data.game
       if (game) {
+        game.start_time_string = moment(game.start_time).format('dddd D MMMM [om] HH:mm')
         const result = render({game});
         const html = htmlTemplate.replace(placeholder, result)
         res.send(html)
