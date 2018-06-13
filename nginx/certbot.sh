@@ -14,7 +14,7 @@ renew () {
 
 if [ ! -f /etc/letsencrypt/renewal/${DOMAIN}.conf ]; then
     echo "No existing certbot config found, creating new certificate..."
-    ( set -x; certbot certonly --webroot -w /acme -n --agree-tos --email ${ADMIN_EMAIL} -d ${DOMAIN} -d www.${DOMAIN} --expand )
+    ( set -x; certbot certonly --webroot -w /acme -n --agree-tos --email ${ADMIN_EMAIL} -d www.${DOMAIN} --expand )
     if [ $? -ne 0 ]; then
         echo "WARNING: Certbot failed to create certificate"
         exit 1
