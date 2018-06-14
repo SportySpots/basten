@@ -19,7 +19,7 @@ if [ ! -f /etc/letsencrypt/renewal/${DOMAIN}.conf ]; then
         echo "WARNING: Certbot failed to create certificate"
         exit 1
     else
-        cp -r /etc/letsencrypt/live/${DOMAIN}/*.pem /cert
+        cp -rL /etc/letsencrypt/live/${DOMAIN}/*.pem /cert
     fi
 else
     renew
