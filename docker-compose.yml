@@ -21,33 +21,25 @@ services:
     build:
       context: ./nginx
     volumes:
-      - ./cert:/cert
       - ./arena:/arena
-      - acme:/acme
       - ./dist:/vue_dist:ro
     depends_on:
       - express
     env_file:
       - .env
-    ports:
-      - 443:443
-      - 80:80
     restart: unless-stopped
 
-  certbot:
-    image: "certbot/certbot"
-    volumes:
-      - ./cert:/cert
-      - ./nginx/certbot.sh:/certbot.sh
-      - ./letsencrypt:/etc/letsencrypt
-      - acme:/acme
-    command: sh /certbot.sh
-    entrypoint: ""
-    env_file:
-      - .env
-    depends_on:
-      - nginx
+  nginx_ssl:
+      image: rsdnlesc/docker-term-letsencrypt
+      volumes:
+        - ./cert:/cert
+        - ./letsencrypt:/etc/letsencrypt
+      env_file:
+        - .env
+      restart: unless-stopped
+      ports:
+        - 443:443
+        - 80:80
 
 volumes:
   vue_dist:
-  acme:
